@@ -4,13 +4,16 @@ using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using QLNhanSu.BindingSQL;
 
 namespace QLNhanSu
 {
     public partial class Auth : Form
     {
+        public string username;
         public Auth()
         {
+            this.username = "";
             InitializeComponent();
         }
 
@@ -24,11 +27,9 @@ namespace QLNhanSu
             string strcon = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=ImportSQL;User ID=sa;Password=banban123";
             SqlConnection con = new SqlConnection(strcon);
             con.Open();
-
-            string query = "SELECT count(*) FROM dbo.Authen WHERE username = '" + txtUsername.Text.Trim() + "' and password = '" + txtPassword.Text.Trim() + "'";
+            string query = "SELECT COUNT(*) FROM dbo.Authen WHERE username = '" + txtUsername.Text.Trim() + "' and password = '" + txtPassword.Text.Trim() + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
             sda.Fill(dt);
-
             if (dt.Rows[0][0].ToString() == "1")
             {
                 this.Hide();
@@ -39,7 +40,7 @@ namespace QLNhanSu
             {
                 MessageBox.Show("Sai tai khoan hoac mat khau");
             }
-
+            this.username = txtUsername.Text;
         }
 
         private void btnRegis_Click(object sender, EventArgs e)

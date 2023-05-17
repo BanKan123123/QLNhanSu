@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +28,150 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Tabs\Employees\FormPhongBan\featurePhongBan\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Employees\FormPhongBan\featurePhongBan\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Employees\FormPhongBan\featurePhongBan\frThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Employees\FormPhongBan\featurePhongBan\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Employees\FormTrinhDo\featureTrinhDo\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Employees\FormTrinhDo\featureTrinhDo\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Employees\FormTrinhDo\featureTrinhDo\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Employees\FormTrinhDo\featureTrinhDo\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormBaoHiem\featureBaoHiem\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormBaoHiem\featureBaoHiem\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormBaoHiem\featureBaoHiem\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormBaoHiem\featureBaoHiem\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormDanToc\featureDanToc\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormDanToc\featureDanToc\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormDanToc\featureDanToc\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormDanToc\featureDanToc\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormHopDong\featureHopDong\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormHopDong\featureHopDong\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormHopDong\featureHopDong\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormHopDong\featureHopDong\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormTonGiao\featureTonGiao\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormTonGiao\featureTonGiao\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormTonGiao\featureTonGiao\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Other\FormTonGiao\featureTonGiao\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormChamCong\featureChamCong\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormChamCong\featureChamCong\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormChamCong\featureChamCong\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormChamCong\featureChamCong\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormPhat\featurePhat\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormPhat\featurePhat\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormPhat\featurePhat\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormPhat\featurePhat\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormTangCa\featureTangCa\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormTangCa\featureTangCa\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormTangCa\featureTangCa\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormTangCa\featureTangCa\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormThuong\featureThuong\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormThuong\featureThuong\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormThuong\featureThuong\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormThuong\featureThuong\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormTinhLuong\featureTinhLuong\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormTinhLuong\featureTinhLuong\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormTinhLuong\featureTinhLuong\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormTinhLuong\featureTinhLuong\frXem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormUngLuong\featureUngLuong\frDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormUngLuong\featureUngLuong\frEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormUngLuong\featureUngLuong\frThem .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Tabs\Salary\FormUngLuong\featureUngLuong\frXem.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 

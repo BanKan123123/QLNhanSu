@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth));
-            fileSystemWatcher1 = new FileSystemWatcher();
             lblUserName = new Label();
             txtUsername = new TextBox();
             lblPassword = new Label();
@@ -40,20 +39,13 @@
             btnRegis = new Button();
             panel2 = new Panel();
             lblLogin = new Label();
-            pictureBox1 = new PictureBox();
             errorRequied = new ErrorProvider(components);
-            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
+            ptbThumbnail = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorRequied).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbThumbnail).BeginInit();
             SuspendLayout();
-            // 
-            // fileSystemWatcher1
-            // 
-            fileSystemWatcher1.EnableRaisingEvents = true;
-            fileSystemWatcher1.SynchronizingObject = this;
-            fileSystemWatcher1.Changed += fileSystemWatcher1_Changed;
             // 
             // lblUserName
             // 
@@ -124,8 +116,8 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(ptbThumbnail);
             panel2.Controls.Add(lblLogin);
-            panel2.Controls.Add(pictureBox1);
             panel2.Location = new Point(12, 65);
             panel2.Name = "panel2";
             panel2.Size = new Size(502, 467);
@@ -141,20 +133,19 @@
             lblLogin.TabIndex = 1;
             lblLogin.Text = "Đăng Nhập";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(20, 114);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(463, 335);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // errorRequied
             // 
             errorRequied.ContainerControl = this;
+            // 
+            // ptbThumbnail
+            // 
+            ptbThumbnail.Image = (Image)resources.GetObject("ptbThumbnail.Image");
+            ptbThumbnail.Location = new Point(25, 137);
+            ptbThumbnail.Name = "ptbThumbnail";
+            ptbThumbnail.Size = new Size(447, 289);
+            ptbThumbnail.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbThumbnail.TabIndex = 3;
+            ptbThumbnail.TabStop = false;
             // 
             // Auth
             // 
@@ -165,21 +156,17 @@
             Controls.Add(panel1);
             Name = "Auth";
             Text = "Đăng nhập";
-            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorRequied).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbThumbnail).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private FileSystemWatcher fileSystemWatcher1;
         private Panel panel2;
-        private PictureBox pictureBox1;
         private Panel panel1;
         private Button btnLogin;
         private TextBox txtPassword;
@@ -189,5 +176,6 @@
         private Label lblLogin;
         private Button btnRegis;
         private ErrorProvider errorRequied;
+        private PictureBox ptbThumbnail;
     }
 }

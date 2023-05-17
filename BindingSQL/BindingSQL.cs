@@ -10,10 +10,12 @@ namespace QLNhanSu.BindingSQL
 {
     public class BindingSQL
     {
+        Auth auth = new Auth();
+        string strcon = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Persist Security Info=True;User ID=sa;Password=banban123";
+        string strAuth = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=ImportSQL;Integrated Security=True";
         public BindingSQL() { }
         public DataTable BindingData(string nameTable)
         {
-            string strcon = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Persist Security Info=True;User ID=sa;Password=banban123";
             DataTable dt = new DataTable();
             try
             {
@@ -27,10 +29,29 @@ namespace QLNhanSu.BindingSQL
                 SqlDataAdapter sda = new SqlDataAdapter(query, conn);
                 sda.Fill(dt);
                 conn.Close();
-            }catch(Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
             return dt;
         }
+
+        public void TestPassword(string password)
+        {
+            SqlConnection con = new SqlConnection(strAuth);
+            con.Open();
+            MessageBox.Show( password + " / " + auth.username);
+            string query = "";
+        }
+
+        public void ThemNhanVien(string query)
+        {
+            SqlConnection conn = new SqlConnection(strcon);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+        }
+
     }
 }

@@ -17,33 +17,12 @@ namespace QLNhanSu
 {
     public partial class Main : Form
     {
-
-        frHome frHome = new frHome();
-        frChPassword frChPassword = new frChPassword();
         Auth auth = new Auth();
-        frEmploy employ = new frEmploy();
-        frPosition position = new frPosition();
-        frDepart depart = new frDepart();
-        frTrinhDo frTrinhDo = new frTrinhDo();
-        frChamCong frChamCong = new frChamCong();
-        frUngLuong frUngLuong = new frUngLuong();
-        frThuong frThuong = new frThuong();
-        frPhat frPhat = new frPhat();
-        frTangCa frTangCa = new frTangCa();
-        frTinhLuong frTinhLuong = new frTinhLuong();
-        frTonGiao frTonGiao = new frTonGiao();
-        frDantoc frDantoc = new frDantoc();
-        frHopDong frHopGiao = new frHopDong();
-        frBaoHiem frBaoHiem = new frBaoHiem();
-
         public Main()
         {
             InitializeComponent();
             this.IsMdiContainer = true;
         }
-
-
-
         public void ShowChildForm(Panel pnlContainer, Form childrent)
         {
             childrent.MdiParent = this;

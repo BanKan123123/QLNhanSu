@@ -101,16 +101,7 @@
     <Compile Update="Tabs\Other\FormTonGiao\featureTonGiao\frXem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Tabs\Salary\FormChamCong\featureChamCong\frDelete.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tabs\Salary\FormChamCong\featureChamCong\frEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tabs\Salary\FormChamCong\featureChamCong\frThem .cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tabs\Salary\FormChamCong\featureChamCong\frXem.cs">
+    <Compile Update="Tabs\Salary\FormChamCong\frXem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Tabs\Salary\FormPhat\featurePhat\frDelete.cs">

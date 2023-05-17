@@ -1,6 +1,6 @@
 ﻿namespace QLNhanSu.Tabs.Salary
 {
-    partial class frChamCong
+    partial class FeatureChamCong
     {
         /// <summary>
         /// Required designer variable.

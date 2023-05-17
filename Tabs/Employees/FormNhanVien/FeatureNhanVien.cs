@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 {
-    public partial class FrThemNhanVien : Form
+    public partial class FeatureNhanVIen : Form
     {
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
         frEmploy employ = new frEmploy();
-        public FrThemNhanVien()
+        public FeatureNhanVIen()
         {
             InitializeComponent();
         }

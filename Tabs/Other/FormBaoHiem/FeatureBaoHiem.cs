@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNhanSu.Tabs.Employees.FormChucVu.FormChucNang
+namespace QLNhanSu.Tabs.Other.FormBaoHiem
 {
-    public partial class frDelete : Form
+    public partial class FeatureBaoHiem : Form
     {
-        public frDelete()
+        public FeatureBaoHiem()
         {
             InitializeComponent();
         }

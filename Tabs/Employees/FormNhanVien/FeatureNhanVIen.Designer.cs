@@ -1,6 +1,6 @@
 ﻿namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 {
-    partial class FrThemNhanVien
+    partial class FeatureNhanVIen
     {
         /// <summary>
         /// Required designer variable.

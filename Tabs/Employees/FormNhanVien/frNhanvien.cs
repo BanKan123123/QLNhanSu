@@ -16,7 +16,7 @@ namespace QLNhanSu.Tabs.Employees
     {
         private readonly string nameTable = "dbo.tbl_NhanVien";
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
-        FrThemNhanVien frThemNhanVien = new FrThemNhanVien();
+        //FeatureNhanVIen frThemNhanVien = new FeatureNhanVIen();
 
         public frEmploy()
         {
@@ -50,7 +50,7 @@ namespace QLNhanSu.Tabs.Employees
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            frThemNhanVien.Show();
+            //frThemNhanVien.Show();
         }
     }
 }

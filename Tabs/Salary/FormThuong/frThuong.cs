@@ -12,7 +12,7 @@ namespace QLNhanSu.Tabs.Salary
 {
     public partial class frThuong : Form
     {
-        private readonly string nameTable = "dbo.tbl_tbl_KhenThuongKyLuat";
+        private readonly string nameTable = "dbo.tbl_KhenThuongKyLuat";
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
         public frThuong()
         {

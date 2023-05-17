@@ -23,23 +23,29 @@ namespace QLNhanSu
             InitializeComponent();
             this.IsMdiContainer = true;
         }
-        public void ShowChildForm(Panel pnlContainer, Form childrent)
+        private Form currentFormChild;
+        private void openChildFrom(Form childFrom)
         {
-            childrent.MdiParent = this;
-            childrent.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(childrent);
-            pnlContainer.Tag = childrent;
-            childrent.BringToFront();
-            childrent.Show();
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
+            currentFormChild = childFrom;
+            childFrom.TopLevel = false;
+            childFrom.FormBorderStyle = FormBorderStyle.None;
+            childFrom.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(childFrom);
+            pnlContainer.Tag = childFrom;
+            childFrom.BringToFront();
+            childFrom.Show();
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frHome);
+            openChildFrom(new frHome());
         }
         private void btnChPassword_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frChPassword);
-            frHome.Hide();
+            openChildFrom(new frChPassword());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -58,84 +64,72 @@ namespace QLNhanSu
 
         private void btnEmploy_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, employ);
+            openChildFrom(new frEmploy());
         }
 
         private void btnPosition_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, position);
-            employ.Hide();
+            openChildFrom(new frPosition());
         }
 
         private void btnDepart_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, depart);
-            position.Hide();
+            openChildFrom(new frDepart());
         }
 
         private void btnTrinhDo_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frTrinhDo);
-            depart.Hide();
+            openChildFrom(new frTrinhDo());
         }
 
         private void btnChamCong_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frChamCong);
+            openChildFrom(new FeatureChamCong());
         }
 
         private void btnUngLuong_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frUngLuong);
-            frChamCong.Hide();
+            openChildFrom(new frUngLuong());
         }
 
         private void btnThuong_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frThuong);
-            frUngLuong.Hide();
+            openChildFrom(new frThuong());
         }
 
         private void btnPhat_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frPhat);
-            frThuong.Hide();
+            openChildFrom(new frPhat());
         }
 
         private void btnTangCa_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frTangCa);
-            frPhat.Hide();
+            openChildFrom(new frTangCa());
         }
 
         private void btnTinhLuong_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frTinhLuong);
-            frTangCa.Hide();
+            openChildFrom(new frTinhLuong());
         }
 
         private void btnTonGiao_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frTonGiao);
-            frTinhLuong.Hide();
+            openChildFrom(new frTonGiao());
         }
 
         private void btnDanToc_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frDantoc);
-            frTonGiao.Hide();
+            openChildFrom(new frDantoc());
         }
 
         private void btnHopDong_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frHopGiao);
-            frDantoc.Hide();
+            openChildFrom(new frHopDong());
         }
 
         private void btnBaoHiem_Click(object sender, EventArgs e)
         {
-            ShowChildForm(pnlContainer, frBaoHiem);
-            frHopGiao.Hide();
+            openChildFrom(new frBaoHiem());
         }
     }
 }

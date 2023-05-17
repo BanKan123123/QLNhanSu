@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLNhanSu.Tabs.Salary
 {
-    public partial class frChamCong : Form
+    public partial class FeatureChamCong : Form
     {
-        public frChamCong()
+        public FeatureChamCong()
         {
             InitializeComponent();
         }

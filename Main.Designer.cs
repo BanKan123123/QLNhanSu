@@ -130,7 +130,7 @@
             tpEmploy.Name = "tpEmploy";
             tpEmploy.Size = new Size(1292, 56);
             tpEmploy.TabIndex = 3;
-            tpEmploy.Text = "Nhận sự";
+            tpEmploy.Text = "Nhân sự";
             tpEmploy.UseVisualStyleBackColor = true;
             // 
             // btnTrinhDo

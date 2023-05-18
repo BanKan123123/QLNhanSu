@@ -40,14 +40,17 @@
             // 
             // dgvNhanvien
             // 
+            dgvNhanvien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvNhanvien.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvNhanvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvNhanvien.Location = new Point(1, 92);
             dgvNhanvien.Name = "dgvNhanvien";
+            dgvNhanvien.ReadOnly = true;
             dgvNhanvien.RowHeadersWidth = 51;
             dgvNhanvien.RowTemplate.Height = 29;
             dgvNhanvien.Size = new Size(910, 543);
             dgvNhanvien.TabIndex = 0;
-            dgvNhanvien.CellContentClick += dataGridView1_CellContentClick;
+            dgvNhanvien.CellContentClick += dgvNhanvien_CellContentClick;
             // 
             // lblSearch
             // 
@@ -87,6 +90,7 @@
             btnXoa.TabIndex = 12;
             btnXoa.Text = "    Xóa";
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnSua
             // 
@@ -98,6 +102,7 @@
             btnSua.TabIndex = 11;
             btnSua.Text = "    Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 

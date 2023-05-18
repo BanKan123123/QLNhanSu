@@ -56,7 +56,7 @@
             cboPhongBan = new ComboBox();
             cboChucVu = new ComboBox();
             btnHuyNhanVien = new Button();
-            label13 = new Label();
+            lblTitleNhanVien = new Label();
             btnReset = new Button();
             SuspendLayout();
             // 
@@ -307,16 +307,15 @@
             btnHuyNhanVien.UseVisualStyleBackColor = true;
             btnHuyNhanVien.Click += btnHuyNhanVien_Click;
             // 
-            // label13
+            // lblTitleNhanVien
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(447, 46);
-            label13.Name = "label13";
-            label13.Size = new Size(216, 38);
-            label13.TabIndex = 32;
-            label13.Text = "Thêm nhân viên";
-            label13.TextAlign = ContentAlignment.TopCenter;
+            lblTitleNhanVien.AutoSize = true;
+            lblTitleNhanVien.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleNhanVien.Location = new Point(447, 46);
+            lblTitleNhanVien.Name = "lblTitleNhanVien";
+            lblTitleNhanVien.Size = new Size(0, 38);
+            lblTitleNhanVien.TabIndex = 32;
+            lblTitleNhanVien.TextAlign = ContentAlignment.TopCenter;
             // 
             // btnReset
             // 
@@ -328,13 +327,13 @@
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = true;
             // 
-            // FrThemNhanVien
+            // FeatureNhanVIen
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1114, 741);
             Controls.Add(btnReset);
-            Controls.Add(label13);
+            Controls.Add(lblTitleNhanVien);
             Controls.Add(btnHuyNhanVien);
             Controls.Add(cboDanToc);
             Controls.Add(cboPhongBan);
@@ -364,7 +363,7 @@
             Controls.Add(btnThemNhanVien);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            Name = "FrThemNhanVien";
+            Name = "FeatureNhanVIen";
             Text = "Thêm Nhân Viên";
             Load += FrThemNhanVien_Load;
             ResumeLayout(false);
@@ -401,7 +400,7 @@
         private ComboBox cboPhongBan;
         private ComboBox cboChucVu;
         private Button btnHuyNhanVien;
-        private Label label13;
+        private Label lblTitleNhanVien;
         private Button btnReset;
     }
 }

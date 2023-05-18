@@ -37,11 +37,35 @@ namespace QLNhanSu.BindingSQL
             return dt;
         }
 
+        public DataTable GetManv()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlConnection conn = new SqlConnection();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+                conn.Open();
+                string query = "SELECT MANV FROM tbl_NhanVien";
+                SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+                sda.Fill(dt);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
+        }
+
         public void TestPassword(string password)
         {
             SqlConnection con = new SqlConnection(strAuth);
             con.Open();
-            MessageBox.Show( password + " / " + auth.username);
+            MessageBox.Show(password + " / " + auth.username);
             string query = "";
         }
 
@@ -51,7 +75,16 @@ namespace QLNhanSu.BindingSQL
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
+        public void XoaNhanVien(string query)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

@@ -31,5 +31,6 @@ namespace QLNhanSu.Tabs.Other
             dt = bindingSQL.BindingData(nameTable);
             dgvBaoHiem.DataSource = dt;
         }
+
     }
 }

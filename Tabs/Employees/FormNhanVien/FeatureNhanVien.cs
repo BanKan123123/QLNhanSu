@@ -1,12 +1,16 @@
 ﻿using QLNhanSu.BindingSQL;
+using QLNhanSu.Tabs.Other;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Data;
 using System.Windows.Forms;
 
 namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
@@ -15,6 +19,7 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
     {
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
         frEmploy employ = new frEmploy();
+        int id;
         public FeatureNhanVIen()
         {
             InitializeComponent();
@@ -27,7 +32,39 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 
         private void FrThemNhanVien_Load(object sender, EventArgs e)
         {
+            
 
+        }
+
+        public void GetDataSelectNhanVien()
+        {
+            cboDanToc.DataSource = bindingSQL.BindingData("tbl_DanToc");
+            cboDanToc.DisplayMember = "tenDt";
+            cboDanToc.ValueMember = "idDt";
+
+            cboBoPhan.DataSource = bindingSQL.BindingData("tbl_BoPhan");
+            cboBoPhan.DisplayMember = "tenBp";
+            cboBoPhan.ValueMember = "idBp";
+
+            //cboCongTy.DataSource = bindingSQL.BindingData("tbl_DanToc");
+            //cboCongTy.DisplayMember = "tenCty";
+            //cboCongTy.ValueMember = "maCty";
+
+            cboChucVu.DataSource = bindingSQL.BindingData("tbl_ChucVu");
+            cboChucVu.DisplayMember = "tenCv";
+            cboChucVu.ValueMember = "idCv";
+
+            cboPhongBan.DataSource = bindingSQL.BindingData("tbl_PhongBan");
+            cboPhongBan.DisplayMember = "tenPb";
+            cboPhongBan.ValueMember = "idPb";
+
+            cboTonGiao.DataSource = bindingSQL.BindingData("tbl_TonGiao");
+            cboTonGiao.DisplayMember = "tenTg";
+            cboTonGiao.ValueMember = "idTg";
+
+            cboTrinhDo.DataSource = bindingSQL.BindingData("tbl_TrinhDo");
+            cboTrinhDo.DisplayMember = "tenTd";
+            cboTrinhDo.ValueMember = "idTd";
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -51,8 +88,59 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            //ThemNhanVien();
-            //employ.BindingData();
+            if(btnThemNhanVien.Text.Trim().Equals("Thêm"))
+            {
+                ThemNhanVien();
+
+            } if (btnThemNhanVien.Text.Trim().Equals("Sửa"))
+            {
+                SuaNhanVien();
+            }
+        }
+
+        public void GetDataNhanVien()
+        {
+            id = GlobalDataNhanVien.SelectedId;
+            txtHoten.Text = GlobalDataNhanVien.SelectedHoTen;
+            dtpDate.Text = GlobalDataNhanVien.SelectedNgaySinh;
+            string sex = GlobalDataNhanVien.SelectedGioiTinh;
+            if (sex.Equals("Nu"))
+            {
+                rdoNu.Checked = true;
+            }
+            else if (sex.Equals("Nam"))
+            {
+                rdoNam.Checked = true;
+            }
+            txtDienThoai.Text = GlobalDataNhanVien.SelectedDienThoai;
+            txtCCCD.Text = GlobalDataNhanVien.SelectedCCCD;
+            txtDiaChi.Text = GlobalDataNhanVien.SelectedDiaChi;
+
+            cboBoPhan.Text = GlobalDataNhanVien.SelectedBoPhan;
+            cboChucVu.Text = GlobalDataNhanVien.SelectedChucVu;
+            cboDanToc.Text = GlobalDataNhanVien.SelectedDanToc;
+            cboPhongBan.Text = GlobalDataNhanVien.SelectedPhongBan;
+            cboTonGiao.Text = GlobalDataNhanVien.SelectedTonGiao;
+            cboTrinhDo.Text = GlobalDataNhanVien.SelectedTrinhDo;
+        }
+
+        public void SetTextForm(string nameButton)
+        {
+            if (nameButton.Equals("Thêm")) {
+                lblTitleNhanVien.Text = "Thêm Nhân Viên";
+                btnThemNhanVien.Text = "Thêm";
+                GetDataSelectNhanVien();
+            }
+            if (nameButton.Equals("Sửa")) {
+                lblTitleNhanVien.Text = "Sửa Nhân Viên";
+                btnThemNhanVien.Text = "Sửa";
+            }
+            if (nameButton.Equals("Xem"))
+            {
+                lblTitleNhanVien.Text = "Xem Nhân Viên";
+                btnThemNhanVien.Visible = true;
+                btnReset.Visible = true;
+            }
         }
 
         public void reset()
@@ -219,8 +307,9 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 
                 try
                 {
-                    string query = "INSERT INTO tbl_NhanVien VALUES ('" + ten + "' , '" + gioiTinh + "' ,  '" + ngaySinh + "' , '" + dienThoai + "' , '" + cccd + "'  , '" + diaChi + "' , '" + idpb + "' , '" + idbp + "' , '" + idcv + "' , '" + idtd + "', '" + iddt + "' , '" + idtg + "'" + ")";
+                    string query = "INSERT INTO tbl_NhanVien VALUES ('" + ten + "' , '" + gioiTinh + "' ,  '" + ngaySinh + "' , '" + dienThoai + "' , '" + cccd + "'  , '" + diaChi + "' , '" + idpb + "' , '" + idbp + "' , '" + idcv + "' , '" + idtd + "', '" + iddt + "' , '" + idtg + "' , '" + 1 + "'  , '" + "" + "' )";
                     bindingSQL.ThemNhanVien(query);
+                    this.Close();
                     reset();
                 }
                 catch (Exception ex)
@@ -229,6 +318,52 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
                 }
             }
         }
+
+        public void SuaNhanVien()
+        {
+            if (kiemTraDuLiieu())
+            {
+                string ten, gioiTinh, ngaySinh, cccd, dienThoai, diaChi;
+                int idcv, idtd, idpb, idbp, iddt, idtg, macty;
+                ten = txtHoten.Text;
+                ngaySinh = dtpDate.Text;
+                gioiTinh = "";
+                if (rdoNam.Checked)
+                {
+                    gioiTinh = "Nam";
+                }
+                else if (rdoNu.Checked)
+                {
+                    gioiTinh = "Nu";
+                }
+                cccd = txtCCCD.Text;
+                dienThoai = txtDienThoai.Text;
+                diaChi = txtDiaChi.Text;
+
+                idcv = Convert.ToInt32(cboChucVu.SelectedValue);
+                idtd = Convert.ToInt32(cboTrinhDo.SelectedValue);
+
+                idpb = Convert.ToInt32(cboPhongBan.SelectedValue);
+
+
+                idbp = Convert.ToInt32(cboBoPhan.SelectedValue);
+
+                idtg = Convert.ToInt32(cboTonGiao.SelectedValue);
+                iddt = Convert.ToInt32(cboDanToc.SelectedValue);
+                try
+                {
+                    string query = "UPDATE tbl_NhanVien SET  HOTEN = '" + ten + "' , GIOITINH = '" + gioiTinh + "' , NGAYSINH = '" + ngaySinh + "' , DIENTHOAI = '" + dienThoai + "' , CCCD = '" + cccd + "' , DIACHI = '" + diaChi + "' , IDPB = '" + idpb + "' , IDBP = '" + idbp + "' , IDCV = '" + idcv + "' ,IDTD = '" + idtd + "', IDDT = '" + iddt + "' , IDTG = '" + idtg + "' ,MACTY = '" + 1 + "' WHERE MANV = '" + id + "' ";
+                    bindingSQL.ThemNhanVien(query);
+                    reset();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+        }
+       
     }
 
 }

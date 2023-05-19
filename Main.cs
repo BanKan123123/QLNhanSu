@@ -1,5 +1,6 @@
 ﻿using QLNhanSu.BindingSQL;
 using QLNhanSu.Tabs.Employees;
+using QLNhanSu.Tabs.Employees.FormTangLuong;
 using QLNhanSu.Tabs.Home;
 using QLNhanSu.Tabs.Other;
 using QLNhanSu.Tabs.Salary;
@@ -84,7 +85,7 @@ namespace QLNhanSu
 
         private void btnChamCong_Click(object sender, EventArgs e)
         {
-            openChildFrom(new FeatureChamCong());
+            openChildFrom(new frChamCong());
         }
 
         private void btnUngLuong_Click(object sender, EventArgs e)
@@ -130,6 +131,11 @@ namespace QLNhanSu
         private void btnBaoHiem_Click(object sender, EventArgs e)
         {
             openChildFrom(new frBaoHiem());
+        }
+
+        private void btnTangLuong_Click(object sender, EventArgs e)
+        {
+            openChildFrom(new frTangLuong());
         }
     }
 }

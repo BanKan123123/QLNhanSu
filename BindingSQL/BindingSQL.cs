@@ -11,7 +11,7 @@ namespace QLNhanSu.BindingSQL
     public class BindingSQL
     {
         Auth auth = new Auth();
-        string strcon = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Persist Security Info=True;User ID=sa;Password=banban123";
+        string strcon = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Persist Security Info=True;User ID=sa;Password=1";
         string strAuth = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=ImportSQL;Integrated Security=True";
         public BindingSQL() { }
         public DataTable BindingData(string nameTable)
@@ -42,13 +42,13 @@ namespace QLNhanSu.BindingSQL
             DataTable dt = new DataTable();
             try
             {
-                SqlConnection conn = new SqlConnection();
+                SqlConnection conn = new SqlConnection(strcon);
                 if (conn.State != ConnectionState.Open)
                 {
                     conn.Close();
                 }
                 conn.Open();
-                string query = "SELECT MANV FROM tbl_NhanVien";
+                string query = "SELECT MANV, HOTEN FROM tbl_NhanVien";
                 SqlDataAdapter sda = new SqlDataAdapter(query, conn);
                 sda.Fill(dt);
                 conn.Close();
@@ -80,7 +80,7 @@ namespace QLNhanSu.BindingSQL
 
         public void XoaNhanVien(string query)
         {
-            SqlConnection conn = new SqlConnection();
+            SqlConnection conn = new SqlConnection(strcon);
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();

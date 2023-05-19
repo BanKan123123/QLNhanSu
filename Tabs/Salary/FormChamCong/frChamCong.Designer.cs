@@ -1,6 +1,9 @@
-﻿namespace QLNhanSu.Tabs.Salary
+﻿using DevExpress.XtraEditors;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+
+namespace QLNhanSu.Tabs.Salary
 {
-    partial class frTinhLuong
+    partial class frChamCong
     {
         /// <summary>
         /// Required designer variable.
@@ -20,6 +23,8 @@
             base.Dispose(disposing);
         }
 
+        // Tạo một đối tượng TextEdit Control
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -31,11 +36,11 @@
             comboBox1 = new ComboBox();
             txtSearch = new TextBox();
             lblSearch = new Label();
-            dgvTinhLuong = new DataGridView();
+            dgvChamCong = new DataGridView();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvTinhLuong).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvChamCong).BeginInit();
             SuspendLayout();
             // 
             // comboBox1
@@ -45,14 +50,14 @@
             comboBox1.Location = new Point(759, 36);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 11;
+            comboBox1.TabIndex = 7;
             // 
             // txtSearch
             // 
             txtSearch.Location = new Point(533, 36);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(193, 27);
-            txtSearch.TabIndex = 10;
+            txtSearch.TabIndex = 6;
             // 
             // lblSearch
             // 
@@ -61,27 +66,27 @@
             lblSearch.Location = new Point(443, 36);
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(84, 25);
-            lblSearch.TabIndex = 9;
+            lblSearch.TabIndex = 5;
             lblSearch.Text = "Tìm kiếm";
             // 
-            // dgvTinhLuong
+            // dgvChamCong
             // 
-            dgvTinhLuong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTinhLuong.Location = new Point(0, 92);
-            dgvTinhLuong.Name = "dgvTinhLuong";
-            dgvTinhLuong.RowHeadersWidth = 51;
-            dgvTinhLuong.RowTemplate.Height = 29;
-            dgvTinhLuong.Size = new Size(910, 543);
-            dgvTinhLuong.TabIndex = 8;
+            dgvChamCong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvChamCong.Location = new Point(0, 93);
+            dgvChamCong.Name = "dgvChamCong";
+            dgvChamCong.RowHeadersWidth = 51;
+            dgvChamCong.RowTemplate.Height = 29;
+            dgvChamCong.Size = new Size(910, 254);
+            dgvChamCong.TabIndex = 4;
             // 
             // button3
             // 
             button3.Image = Properties.Resources.icons8_delete_30;
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(952, 226);
+            button3.Location = new Point(952, 227);
             button3.Name = "button3";
             button3.Size = new Size(139, 45);
-            button3.TabIndex = 39;
+            button3.TabIndex = 33;
             button3.Text = "    Xóa";
             button3.UseVisualStyleBackColor = true;
             // 
@@ -89,10 +94,10 @@
             // 
             button2.Image = Properties.Resources.icons8_edit_30;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(952, 159);
+            button2.Location = new Point(952, 160);
             button2.Name = "button2";
             button2.Size = new Size(139, 45);
-            button2.TabIndex = 38;
+            button2.TabIndex = 32;
             button2.Text = "    Sửa";
             button2.UseVisualStyleBackColor = true;
             // 
@@ -100,14 +105,14 @@
             // 
             button1.Image = Properties.Resources.icons8_add_30;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(952, 92);
+            button1.Location = new Point(952, 93);
             button1.Name = "button1";
             button1.Size = new Size(139, 45);
-            button1.TabIndex = 37;
+            button1.TabIndex = 31;
             button1.Text = "    Thêm";
             button1.UseVisualStyleBackColor = true;
             // 
-            // frTinhLuong
+            // frChamCong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -118,13 +123,15 @@
             Controls.Add(comboBox1);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
-            Controls.Add(dgvTinhLuong);
+            Controls.Add(dgvChamCong);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frTinhLuong";
-            Text = "Tính lương";
-            ((System.ComponentModel.ISupportInitialize)dgvTinhLuong).EndInit();
+            Name = "frChamCong";
+            Text = "Chấm công";
+            ((System.ComponentModel.ISupportInitialize)dgvChamCong).EndInit();
             ResumeLayout(false);
             PerformLayout();
+
+            // Tạo một đối tượng TextEdit Control
         }
 
         #endregion
@@ -132,7 +139,7 @@
         private ComboBox comboBox1;
         private TextBox txtSearch;
         private Label lblSearch;
-        private DataGridView dgvTinhLuong;
+        private DataGridView dgvChamCong;
         private Button button3;
         private Button button2;
         private Button button1;

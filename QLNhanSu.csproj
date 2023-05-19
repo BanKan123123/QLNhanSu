@@ -14,8 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevExpress.Data" Version="22.2.6" />
+    <PackageReference Include="DevExpress.Xpo" Version="22.2.6" />
+    <PackageReference Include="DevExtreme.AspNet.Data" Version="2.9.2" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="XtraEditor.Controls" Version="18.2.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -101,7 +105,7 @@
     <Compile Update="Tabs\Other\FormTonGiao\featureTonGiao\frXem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Tabs\Salary\FormChamCong\frXem.cs">
+    <Compile Update="Tabs\Salary\FormChamCong\FeatureChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Tabs\Salary\FormPhat\featurePhat\frDelete.cs">

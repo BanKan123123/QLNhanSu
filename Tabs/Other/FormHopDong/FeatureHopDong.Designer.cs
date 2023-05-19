@@ -278,6 +278,7 @@
             btnThemHopDong.TabIndex = 25;
             btnThemHopDong.Text = "Thêm";
             btnThemHopDong.UseVisualStyleBackColor = true;
+            btnThemHopDong.Click += btnThemHopDong_Click;
             // 
             // btnHuy
             // 

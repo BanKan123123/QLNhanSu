@@ -1,6 +1,6 @@
-﻿namespace QLNhanSu.Tabs.Salary.FormTinhLuong
+﻿namespace QLNhanSu.Tabs.Employees.FormTangLuong
 {
-    partial class FeatureUngLuong
+    partial class FeatureTangLuong
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FeatureUngLuong";
+            SuspendLayout();
+            // 
+            // FeatureTangLuong
+            // 
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(864, 568);
+            Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            Name = "FeatureTangLuong";
+            Text = "FeatureTangLuong";
+            ResumeLayout(false);
         }
 
         #endregion

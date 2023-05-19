@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNhanSu.Tabs.Employees.FormChucVu.FormChucNang
+namespace QLNhanSu.Tabs.Employees.FormTangLuong
 {
-    public partial class frXem : Form
+    public partial class FeatureTangLuong : Form
     {
-        public frXem()
+        public FeatureTangLuong()
         {
             InitializeComponent();
         }

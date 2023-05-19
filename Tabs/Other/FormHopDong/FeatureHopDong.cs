@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace QLNhanSu.Tabs.Other.FormHopDong
 {
     public partial class FeatureHopDong : Form
     {
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
-        int shd;
         public FeatureHopDong()
         {
             InitializeComponent();
@@ -43,7 +43,12 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
 
         public void GetDataSelectNhanVien()
         {
-
+            cboNguoiDaiDien.DataSource = bindingSQL.GetManv();
+            cboNguoiDaiDien.DisplayMember = "HOTEN";
+            cboNguoiDaiDien.ValueMember = "MANV";
+            cboNhanVien.DataSource = bindingSQL.GetManv();
+            cboNhanVien.DisplayMember = "HOTEN";
+            cboNhanVien.ValueMember = "MANV";
         }
 
         public void SetTextForm(string nameButton)
@@ -52,11 +57,13 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
             {
                 lblTitleHopDong.Text = "Thêm Nhân Viên";
                 btnThemHopDong.Text = "Thêm";
+                GetDataSelectNhanVien();
             }
             if (nameButton.Equals("Sửa"))
             {
                 lblTitleHopDong.Text = "Sửa Nhân Viên";
                 btnThemHopDong.Text = "Sửa";
+                GetDataSelectNhanVien();
             }
             if (nameButton.Equals("Xem"))
             {
@@ -66,6 +73,20 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
             }
         }
 
+        public void GetDataHopDong()
+        {
+            cboNguoiDaiDien.Text = GlobalDataHopDong.SelectedNguoiDaiDien;
+            cboNhanVien.Text = GlobalDataHopDong.SelectedNhanVien;
+            dtpNgayBatDau.Text = GlobalDataHopDong.SelectedNgayBatDau;
+            dtpNgayKetThuc.Text = GlobalDataHopDong.SelectedNgayKetThuc;
+            dtpNgayKy.Text = GlobalDataHopDong.SelectedNgayKy;
+            txtThoiHan.Text = GlobalDataHopDong.SelectedThoiGian;
+            txtLanKy.Text = GlobalDataHopDong.SelectedLanKy.ToString();
+            txtHeSoLuong.Text = GlobalDataHopDong.SelectedHeSoLuong.ToString();
+            txtLuongCoBan.Text = GlobalDataHopDong.SelectedLuongCoBan.ToString();
+            txtLoaiHopDong.Text = GlobalDataHopDong.SelectedLoaiHopDong;
+            txtNoiDung.Text = GlobalDataHopDong.SelectedNoiDung;
+        }
         public Boolean kiemTraDuLieu()
         {
             string soHopDong, nguoiDaiDien, nhanVien, ngayBatDau, ngayKetThuc, ngayKy, thoiHan, lanKy, hsl, loaiHopDong, congTy, noiDung;
@@ -85,8 +106,6 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
                 cboNguoiDaiDien.Focus();
                 return false;
             }
-
-
 
             nhanVien = cboNhanVien.Text;
             if (nhanVien.Trim() == "")
@@ -173,16 +192,16 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
 
         }
 
-        public void luuThem()
+        public void ThemHopDong()
         {
             if (kiemTraDuLieu())
             {
                 string soHopDong = txtSoHopDong.Text;
                 int nguoiDaiDien = Convert.ToInt32(cboNguoiDaiDien.SelectedValue);
                 int nhanVien = Convert.ToInt32(cboNhanVien.SelectedValue);
-                string ngayBatDau = dtpNgayBatDau.Text;
-                string ngayKetThuc = dtpNgayKetThuc.Text;
-                string ngayKy = dtpNgayKy.Text;
+                string ngayBatDau = dtpNgayBatDau.Value.ToString("yyyy-MM-dd");
+                string ngayKetThuc = dtpNgayKetThuc.Value.ToString("yyyy-MM-dd");
+                string ngayKy = dtpNgayKy.Value.ToString("yyyy-MM-dd");
                 string noiDung = txtNoiDung.Text;
                 int lanKy = Convert.ToInt32(txtLanKy.Text);
                 string thoiHan = txtThoiHan.Text;
@@ -198,15 +217,13 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi không thể thêm được");
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
 
-        public void luuSua()
-
+        public void SuaHopDong()
         {
-
             if (kiemTraDuLieu())
             {
                 string soHopDong = txtSoHopDong.Text;
@@ -225,7 +242,7 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
 
                 try
                 {
-                    string query = "UPDATE tbl_HopDong SET SOHD = '" + soHopDong + "' , NGUOIDAIDIEN = '" + nguoiDaiDien + "' , MANV = '" + nhanVien + "' , NGAYBATDAU = '" + ngayBatDau + "' , NGAYKETTHUC = '" + ngayKetThuc + "' , NGAYKY = '" + ngayKy + "' ,NOIDUNG = '" + noiDung + "' , LANKY = '" + lanKy + "' , THOIHAN = '" + thoiHan + "' , LUONGCOBAN = '" + lcb + "' , HESOLUONG = '" + hsl + "' ,LOAIHOPDONG = '" + loaiHopDong + "' , MACTY ='" + 1 + "' WHERE SOHD ='" + shd + "' ";
+                    string query = "UPDATE tbl_HopDong SET SOHD = '" + soHopDong + "' , NGUOIDAIDIEN = '" + nguoiDaiDien + "' , MANV = '" + nhanVien + "' , NGAYBATDAU = '" + ngayBatDau + "' , NGAYKETTHUC = '" + ngayKetThuc + "' , NGAYKY = '" + ngayKy + "' ,NOIDUNG = '" + noiDung + "' , LANKY = '" + lanKy + "' , THOIHAN = '" + thoiHan + "' , LUONGCOBAN = '" + lcb + "' , HESOLUONG = '" + hsl + "' ,LOAIHOPDONG = '" + loaiHopDong + "' , MACTY ='" + 1 + "' WHERE SOHD ='" + GlobalDataHopDong.SelectedSoHopDong + "' ";
                     bindingSQL.ThemNhanVien(query);
                     reset();
                 }
@@ -236,5 +253,15 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
             }
         }
 
+        private void btnThemHopDong_Click(object sender, EventArgs e)
+        {
+            if (btnThemHopDong.Text.Trim().Equals("Thêm"))
+            {
+                ThemHopDong();
+            } if (btnThemHopDong.Text.Trim().Equals("Sửa"))
+            {
+                SuaHopDong();
+            }
+        }
     }
 }

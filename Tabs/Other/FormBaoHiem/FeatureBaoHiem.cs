@@ -1,11 +1,12 @@
-﻿using QLNhanSu.Tabs.Employees.FormNhanVien;
+﻿using Microsoft.VisualBasic;
+using QLNhanSu.Tabs.Employees.FormNhanVien;
+using System.Collections.Generic;
 
 namespace QLNhanSu.Tabs.Other.FormBaoHiem
 {
     public partial class FeatureBaoHiem : Form
     {
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
-        int id;
         public FeatureBaoHiem()
         {
             InitializeComponent();
@@ -69,6 +70,8 @@ namespace QLNhanSu.Tabs.Other.FormBaoHiem
         public void GetDataSelectNhanVien()
         {
             cboMasv.DataSource = bindingSQL.GetManv();
+            cboMasv.DisplayMember = "HOTEN";
+            cboMasv.ValueMember = "MANV";
         }
         public void SetTextForm(string nameButton)
         {
@@ -95,7 +98,7 @@ namespace QLNhanSu.Tabs.Other.FormBaoHiem
         }
         public void GetDataBaoHiem()
         {
-            id = GlobalDataNhanVien.SelectedId;
+            MessageBox.Show(GlobalDataBaoHiem.SelectedId.ToString());
             txtSoBaoHiem.Text = GlobalDataBaoHiem.SelectedSoBH;
             dtpDate.Text = GlobalDataBaoHiem.SelectedDate;
             txtNoiCap.Text = GlobalDataBaoHiem.SelectedNoiCap;
@@ -148,8 +151,7 @@ namespace QLNhanSu.Tabs.Other.FormBaoHiem
                     noiCap = txtNoiCap.Text;
                     noiKham = txtNoiKham.Text;
                     manv = cboMasv.SelectedValue.ToString();
-
-                    string query = "UPDATE tbl_BaoHiem SET SOBH = '" + soBH + "', NGAYCAP = '" + date + "', NOICAP = '" + noiCap + "', NOIKHAMBENH = '" + noiKham + "', MANV = '" + manv + "' WHERE IDBH = '" + id + "'";
+                    string query = "UPDATE tbl_BaoHiem SET SOBH = '" + soBH + "', NGAYCAP = '" + date + "', NOICAP = '" + noiCap + "', NOIKHAMBENH = '" + noiKham + "', MANV = '" + manv + "' WHERE IDBH = '" + GlobalDataBaoHiem.SelectedId + "'";
                     bindingSQL.ThemNhanVien(query);
                     Reset();
                 }

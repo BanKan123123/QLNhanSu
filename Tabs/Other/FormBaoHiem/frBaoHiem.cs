@@ -34,8 +34,6 @@ namespace QLNhanSu.Tabs.Other
             dgvBaohiem.DataSource = dt;
         }
 
-
-
         private void dgvBaohiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var row = (DataGridViewRow)dgvBaohiem.Rows[e.RowIndex];
@@ -47,6 +45,8 @@ namespace QLNhanSu.Tabs.Other
             GlobalDataBaoHiem.SelectedKhamBenh = row.Cells[4].Value.ToString();
             GlobalDataBaoHiem.SelectedMasv = row.Cells[5].Value.ToString();
         }
+
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -74,7 +74,7 @@ namespace QLNhanSu.Tabs.Other
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Không có dữ liệu để xóa");
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

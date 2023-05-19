@@ -52,6 +52,7 @@
             btnDanToc = new Button();
             btnTonGiao = new Button();
             pnlContainer = new Panel();
+            btnTangLuong = new Button();
             tclApp.SuspendLayout();
             tpSystem.SuspendLayout();
             tpEmploy.SuspendLayout();
@@ -88,7 +89,7 @@
             // 
             btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(944, 0);
+            btnLogout.Location = new Point(927, 0);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(150, 56);
             btnLogout.TabIndex = 2;
@@ -100,7 +101,7 @@
             // 
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHome.Location = new Point(234, 0);
+            btnHome.Location = new Point(214, 0);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(150, 56);
             btnHome.TabIndex = 1;
@@ -112,7 +113,7 @@
             // 
             btnChPassword.Image = (Image)resources.GetObject("btnChPassword.Image");
             btnChPassword.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChPassword.Location = new Point(588, 0);
+            btnChPassword.Location = new Point(560, 0);
             btnChPassword.Name = "btnChPassword";
             btnChPassword.Size = new Size(154, 56);
             btnChPassword.TabIndex = 0;
@@ -122,6 +123,7 @@
             // 
             // tpEmploy
             // 
+            tpEmploy.Controls.Add(btnTangLuong);
             tpEmploy.Controls.Add(btnTrinhDo);
             tpEmploy.Controls.Add(btnDepart);
             tpEmploy.Controls.Add(btnPosition);
@@ -137,7 +139,7 @@
             // 
             btnTrinhDo.Image = Properties.Resources.icons8_level_30;
             btnTrinhDo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTrinhDo.Location = new Point(1005, 0);
+            btnTrinhDo.Location = new Point(810, 0);
             btnTrinhDo.Name = "btnTrinhDo";
             btnTrinhDo.Size = new Size(154, 56);
             btnTrinhDo.TabIndex = 5;
@@ -149,7 +151,7 @@
             // 
             btnDepart.Image = Properties.Resources.icons8_department_30;
             btnDepart.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDepart.Location = new Point(728, 0);
+            btnDepart.Location = new Point(567, 0);
             btnDepart.Name = "btnDepart";
             btnDepart.Size = new Size(154, 56);
             btnDepart.TabIndex = 3;
@@ -161,7 +163,7 @@
             // 
             btnPosition.Image = Properties.Resources.icons8_position_30;
             btnPosition.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPosition.Location = new Point(424, 0);
+            btnPosition.Location = new Point(324, 0);
             btnPosition.Name = "btnPosition";
             btnPosition.Size = new Size(154, 56);
             btnPosition.TabIndex = 2;
@@ -173,7 +175,7 @@
             // 
             btnEmploy.Image = Properties.Resources.icons8_employee_30;
             btnEmploy.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEmploy.Location = new Point(136, 0);
+            btnEmploy.Location = new Point(88, 0);
             btnEmploy.Name = "btnEmploy";
             btnEmploy.Size = new Size(154, 56);
             btnEmploy.TabIndex = 1;
@@ -275,9 +277,9 @@
             tpOther.Controls.Add(btnHopDong);
             tpOther.Controls.Add(btnDanToc);
             tpOther.Controls.Add(btnTonGiao);
-            tpOther.Location = new Point(4, 32);
+            tpOther.Location = new Point(4, 29);
             tpOther.Name = "tpOther";
-            tpOther.Size = new Size(1292, 56);
+            tpOther.Size = new Size(1292, 59);
             tpOther.TabIndex = 2;
             tpOther.Text = "Khác";
             tpOther.UseVisualStyleBackColor = true;
@@ -337,6 +339,18 @@
             pnlContainer.Size = new Size(1292, 682);
             pnlContainer.TabIndex = 1;
             // 
+            // btnTangLuong
+            // 
+            btnTangLuong.Image = Properties.Resources.icons8_increase_30;
+            btnTangLuong.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTangLuong.Location = new Point(1051, 0);
+            btnTangLuong.Name = "btnTangLuong";
+            btnTangLuong.Size = new Size(154, 56);
+            btnTangLuong.TabIndex = 6;
+            btnTangLuong.Text = "      Tăng Lương";
+            btnTangLuong.UseVisualStyleBackColor = true;
+            btnTangLuong.Click += btnTangLuong_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
@@ -381,5 +395,6 @@
         private Button btnTonGiao;
         private Button btnTrinhDo;
         private Panel pnlContainer;
+        private Button btnTangLuong;
     }
 }

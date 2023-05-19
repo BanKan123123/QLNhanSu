@@ -12,7 +12,7 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
         public static int SelectedSoHopDong {  get; set; }    
         public static string SelectedNguoiDaiDien { get; set; }
 
-        public static int SelectedManv { get; set; }
+        public static string SelectedNhanVien { get; set; }
 
         public static string SelectedNgayBatDau { get; set; }
 

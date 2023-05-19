@@ -32,9 +32,9 @@
             txtSearch = new TextBox();
             lblSearch = new Label();
             dgvBaoHiem = new DataGridView();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnXoa = new Button();
+            btnSua = new Button();
+            btnThem = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvBaoHiem).BeginInit();
             SuspendLayout();
             // 
@@ -75,47 +75,50 @@
             dgvBaoHiem.TabIndex = 4;
             dgvBaoHiem.CellContentClick += dgvBaoHiem_CellContentClick;
             // 
-            // button3
+            // btnXoa
             // 
-            button3.Image = Properties.Resources.icons8_delete_30;
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(952, 226);
-            button3.Name = "button3";
-            button3.Size = new Size(139, 45);
-            button3.TabIndex = 27;
-            button3.Text = "    Xóa";
-            button3.UseVisualStyleBackColor = true;
+            btnXoa.Image = Properties.Resources.icons8_delete_30;
+            btnXoa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnXoa.Location = new Point(952, 226);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(139, 45);
+            btnXoa.TabIndex = 27;
+            btnXoa.Text = "    Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
-            // button2
+            // btnSua
             // 
-            button2.Image = Properties.Resources.icons8_edit_30;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(952, 159);
-            button2.Name = "button2";
-            button2.Size = new Size(139, 45);
-            button2.TabIndex = 26;
-            button2.Text = "    Sửa";
-            button2.UseVisualStyleBackColor = true;
+            btnSua.Image = Properties.Resources.icons8_edit_30;
+            btnSua.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSua.Location = new Point(952, 159);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(139, 45);
+            btnSua.TabIndex = 26;
+            btnSua.Text = "    Sửa";
+            btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
-            // button1
+            // btnThem
             // 
-            button1.Image = Properties.Resources.icons8_add_30;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(952, 92);
-            button1.Name = "button1";
-            button1.Size = new Size(139, 45);
-            button1.TabIndex = 25;
-            button1.Text = "    Thêm";
-            button1.UseVisualStyleBackColor = true;
+            btnThem.Image = Properties.Resources.icons8_add_30;
+            btnThem.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThem.Location = new Point(952, 92);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(139, 45);
+            btnThem.TabIndex = 25;
+            btnThem.Text = "    Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // frHopDong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1103, 635);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnXoa);
+            Controls.Add(btnSua);
+            Controls.Add(btnThem);
             Controls.Add(comboBox1);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
@@ -123,6 +126,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frHopDong";
             Text = "Hợp đồng";
+            Load += frHopDong_Load;
             ((System.ComponentModel.ISupportInitialize)dgvBaoHiem).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -134,8 +138,8 @@
         private TextBox txtSearch;
         private Label lblSearch;
         private DataGridView dgvBaoHiem;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnXoa;
+        private Button btnSua;
+        private Button btnThem;
     }
 }

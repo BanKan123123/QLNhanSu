@@ -1,6 +1,6 @@
-﻿namespace QLNhanSu.Tabs.Employees.FormChucVu.FormChucNang
+﻿namespace QLNhanSu.Tabs.Salary.FormTinhLuong
 {
-    partial class frXem
+    partial class FeatureTinhLuong
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frXem";
+            this.Text = "FeatureUngLuong";
         }
 
         #endregion

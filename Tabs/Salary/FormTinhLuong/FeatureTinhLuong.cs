@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLNhanSu.Tabs.Salary.FormTinhLuong
 {
-    public partial class FeatureUngLuong : Form
+    public partial class FeatureTinhLuong : Form
     {
-        public FeatureUngLuong()
+        public FeatureTinhLuong()
         {
             InitializeComponent();
         }

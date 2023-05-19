@@ -49,7 +49,6 @@ namespace QLNhanSu.Tabs.Employees
             featureNhanVien.SetTextForm(btnThem.Text.Trim());
             featureNhanVien.Show();
         }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             FeatureNhanVIen featureNhanVien = new FeatureNhanVIen();

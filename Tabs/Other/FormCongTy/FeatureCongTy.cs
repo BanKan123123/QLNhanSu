@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNhanSu.Tabs.Employees.FormChucVu.FeatureChucVu
+namespace QLNhanSu.Tabs.Other.FormCongTy
 {
-    public partial class FrXemChucVu : Form
+    public partial class FeatureCongTy : Form
     {
-        public FrXemChucVu()
+        public FeatureCongTy()
         {
             InitializeComponent();
         }
 
-        private void frXemChucVu_Load(object sender, EventArgs e)
+        private void ptbCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

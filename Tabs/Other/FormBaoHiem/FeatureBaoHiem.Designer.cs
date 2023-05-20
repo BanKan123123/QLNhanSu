@@ -28,31 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblSbh = new Label();
             txtSoBaoHiem = new TextBox();
-            label2 = new Label();
+            lblNgayCap = new Label();
             dtpDate = new DateTimePicker();
             txtNoiCap = new TextBox();
-            label3 = new Label();
+            lblNoiCap = new Label();
             txtNoiKham = new TextBox();
-            label4 = new Label();
+            lblNoiKhamBenh = new Label();
             cboMasv = new ComboBox();
-            label5 = new Label();
+            lblManv = new Label();
             lblTitleBaoHiem = new Label();
             btnThemBaoHiem = new Button();
             btnCancel = new Button();
             btnReset = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblSbh
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(184, 100);
-            label1.Name = "label1";
-            label1.Size = new Size(126, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Số bảo hiểm:";
+            lblSbh.AutoSize = true;
+            lblSbh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSbh.Location = new Point(184, 100);
+            lblSbh.Name = "lblSbh";
+            lblSbh.Size = new Size(126, 28);
+            lblSbh.TabIndex = 0;
+            lblSbh.Text = "Số bảo hiểm:";
             // 
             // txtSoBaoHiem
             // 
@@ -62,15 +64,15 @@
             txtSoBaoHiem.Size = new Size(321, 34);
             txtSoBaoHiem.TabIndex = 1;
             // 
-            // label2
+            // lblNgayCap
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(184, 160);
-            label2.Name = "label2";
-            label2.Size = new Size(99, 28);
-            label2.TabIndex = 2;
-            label2.Text = "Ngày cấp:";
+            lblNgayCap.AutoSize = true;
+            lblNgayCap.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNgayCap.Location = new Point(184, 160);
+            lblNgayCap.Name = "lblNgayCap";
+            lblNgayCap.Size = new Size(99, 28);
+            lblNgayCap.TabIndex = 2;
+            lblNgayCap.Text = "Ngày cấp:";
             // 
             // dtpDate
             // 
@@ -90,15 +92,15 @@
             txtNoiCap.Size = new Size(321, 34);
             txtNoiCap.TabIndex = 5;
             // 
-            // label3
+            // lblNoiCap
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(184, 225);
-            label3.Name = "label3";
-            label3.Size = new Size(84, 28);
-            label3.TabIndex = 4;
-            label3.Text = "Nơi cấp:";
+            lblNoiCap.AutoSize = true;
+            lblNoiCap.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNoiCap.Location = new Point(184, 225);
+            lblNoiCap.Name = "lblNoiCap";
+            lblNoiCap.Size = new Size(84, 28);
+            lblNoiCap.TabIndex = 4;
+            lblNoiCap.Text = "Nơi cấp:";
             // 
             // txtNoiKham
             // 
@@ -108,15 +110,15 @@
             txtNoiKham.Size = new Size(321, 34);
             txtNoiKham.TabIndex = 7;
             // 
-            // label4
+            // lblNoiKhamBenh
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(184, 290);
-            label4.Name = "label4";
-            label4.Size = new Size(150, 28);
-            label4.TabIndex = 6;
-            label4.Text = "Nơi khám bệnh:";
+            lblNoiKhamBenh.AutoSize = true;
+            lblNoiKhamBenh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNoiKhamBenh.Location = new Point(184, 290);
+            lblNoiKhamBenh.Name = "lblNoiKhamBenh";
+            lblNoiKhamBenh.Size = new Size(150, 28);
+            lblNoiKhamBenh.TabIndex = 6;
+            lblNoiKhamBenh.Text = "Nơi khám bệnh:";
             // 
             // cboMasv
             // 
@@ -127,21 +129,21 @@
             cboMasv.Size = new Size(321, 36);
             cboMasv.TabIndex = 8;
             // 
-            // label5
+            // lblManv
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(184, 356);
-            label5.Name = "label5";
-            label5.Size = new Size(70, 28);
-            label5.TabIndex = 9;
-            label5.Text = "MANV";
+            lblManv.AutoSize = true;
+            lblManv.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblManv.Location = new Point(184, 356);
+            lblManv.Name = "lblManv";
+            lblManv.Size = new Size(70, 28);
+            lblManv.TabIndex = 9;
+            lblManv.Text = "MANV";
             // 
             // lblTitleBaoHiem
             // 
             lblTitleBaoHiem.AutoSize = true;
             lblTitleBaoHiem.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitleBaoHiem.Location = new Point(371, 20);
+            lblTitleBaoHiem.Location = new Point(369, 12);
             lblTitleBaoHiem.Name = "lblTitleBaoHiem";
             lblTitleBaoHiem.Size = new Size(0, 38);
             lblTitleBaoHiem.TabIndex = 10;
@@ -179,48 +181,62 @@
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.icons8_cancel_30;
+            pictureBox1.Location = new Point(838, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(30, 30);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
+            // 
             // FeatureBaoHiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(880, 524);
+            Controls.Add(pictureBox1);
             Controls.Add(btnReset);
             Controls.Add(btnCancel);
             Controls.Add(btnThemBaoHiem);
             Controls.Add(lblTitleBaoHiem);
-            Controls.Add(label5);
+            Controls.Add(lblManv);
             Controls.Add(cboMasv);
             Controls.Add(txtNoiKham);
-            Controls.Add(label4);
+            Controls.Add(lblNoiKhamBenh);
             Controls.Add(txtNoiCap);
-            Controls.Add(label3);
+            Controls.Add(lblNoiCap);
             Controls.Add(dtpDate);
-            Controls.Add(label2);
+            Controls.Add(lblNgayCap);
             Controls.Add(txtSoBaoHiem);
-            Controls.Add(label1);
+            Controls.Add(lblSbh);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FeatureBaoHiem";
             Text = "FeatureBaoHiem";
             Load += FeatureBaoHiem_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Label lblSbh;
         private TextBox txtSoBaoHiem;
-        private Label label2;
+        private Label lblNgayCap;
         private DateTimePicker dtpDate;
         private TextBox txtNoiCap;
-        private Label label3;
+        private Label lblNoiCap;
         private TextBox txtNoiKham;
-        private Label label4;
+        private Label lblNoiKhamBenh;
         private ComboBox cboMasv;
-        private Label label5;
+        private Label lblManv;
         private Label lblTitleBaoHiem;
         private Button btnThemBaoHiem;
         private Button btnCancel;
         private Button btnReset;
+        private PictureBox pictureBox1;
     }
 }

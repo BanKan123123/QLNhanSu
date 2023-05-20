@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNhanSu.Tabs.Salary.FormTinhLuong
+namespace QLNhanSu.Tabs.Employees.FormDieuChuyen
 {
-    public partial class FeatureThuong : Form
+    public partial class FeatureDieuChuyen : Form
     {
-        public FeatureThuong()
+        public FeatureDieuChuyen()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

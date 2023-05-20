@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace QLNhanSu.Tabs.Salary
 {
-    public partial class frPhat : Form
+    public partial class frThuongPhat : Form
     {
         private readonly string nameTable = "dbo.tbl_KhenThuongKyLuat";
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
-        public frPhat()
+        public frThuongPhat()
         {
             InitializeComponent();
             BindingData();
         }
 
-        private void dgvPhat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvThuong_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -29,7 +29,12 @@ namespace QLNhanSu.Tabs.Salary
         {
             DataTable dt = new DataTable();
             dt = bindingSQL.BindingData(nameTable);
-            dgvPhat.DataSource = dt;
+            dgvThuong.DataSource = dt;
+        }
+
+        private void cboSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

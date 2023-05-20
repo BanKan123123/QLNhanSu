@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
+            cboSearch = new ComboBox();
             txtSearch = new TextBox();
             lblSearch = new Label();
             dgvBaoHiem = new DataGridView();
@@ -38,14 +38,14 @@
             ((System.ComponentModel.ISupportInitialize)dgvBaoHiem).BeginInit();
             SuspendLayout();
             // 
-            // comboBox1
+            // cboSearch
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Tất cả", "Nam", "Nữ" });
-            comboBox1.Location = new Point(759, 36);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 7;
+            cboSearch.FormattingEnabled = true;
+            cboSearch.Items.AddRange(new object[] { "Tất cả", "Nam", "Nữ" });
+            cboSearch.Location = new Point(759, 36);
+            cboSearch.Name = "cboSearch";
+            cboSearch.Size = new Size(151, 28);
+            cboSearch.TabIndex = 7;
             // 
             // txtSearch
             // 
@@ -119,7 +119,7 @@
             Controls.Add(btnXoa);
             Controls.Add(btnSua);
             Controls.Add(btnThem);
-            Controls.Add(comboBox1);
+            Controls.Add(cboSearch);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
             Controls.Add(dgvBaoHiem);
@@ -134,7 +134,7 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox cboSearch;
         private TextBox txtSearch;
         private Label lblSearch;
         private DataGridView dgvBaoHiem;

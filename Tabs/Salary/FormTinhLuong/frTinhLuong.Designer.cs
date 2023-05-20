@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
+            cboSearch = new ComboBox();
             txtSearch = new TextBox();
             lblSearch = new Label();
             dgvTinhLuong = new DataGridView();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnXoa = new Button();
+            btnSua = new Button();
+            btnThem = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvTinhLuong).BeginInit();
             SuspendLayout();
             // 
-            // comboBox1
+            // cboSearch
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Tất cả", "Nam", "Nữ" });
-            comboBox1.Location = new Point(759, 36);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 11;
+            cboSearch.FormattingEnabled = true;
+            cboSearch.Items.AddRange(new object[] { "Tất cả", "Nam", "Nữ" });
+            cboSearch.Location = new Point(759, 36);
+            cboSearch.Name = "cboSearch";
+            cboSearch.Size = new Size(151, 28);
+            cboSearch.TabIndex = 11;
             // 
             // txtSearch
             // 
@@ -74,48 +74,48 @@
             dgvTinhLuong.Size = new Size(910, 543);
             dgvTinhLuong.TabIndex = 8;
             // 
-            // button3
+            // btnXoa
             // 
-            button3.Image = Properties.Resources.icons8_delete_30;
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(952, 226);
-            button3.Name = "button3";
-            button3.Size = new Size(139, 45);
-            button3.TabIndex = 39;
-            button3.Text = "    Xóa";
-            button3.UseVisualStyleBackColor = true;
+            btnXoa.Image = Properties.Resources.icons8_delete_30;
+            btnXoa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnXoa.Location = new Point(952, 226);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(139, 45);
+            btnXoa.TabIndex = 39;
+            btnXoa.Text = "    Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSua
             // 
-            button2.Image = Properties.Resources.icons8_edit_30;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(952, 159);
-            button2.Name = "button2";
-            button2.Size = new Size(139, 45);
-            button2.TabIndex = 38;
-            button2.Text = "    Sửa";
-            button2.UseVisualStyleBackColor = true;
+            btnSua.Image = Properties.Resources.icons8_edit_30;
+            btnSua.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSua.Location = new Point(952, 159);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(139, 45);
+            btnSua.TabIndex = 38;
+            btnSua.Text = "    Sửa";
+            btnSua.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnThem
             // 
-            button1.Image = Properties.Resources.icons8_add_30;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(952, 92);
-            button1.Name = "button1";
-            button1.Size = new Size(139, 45);
-            button1.TabIndex = 37;
-            button1.Text = "    Thêm";
-            button1.UseVisualStyleBackColor = true;
+            btnThem.Image = Properties.Resources.icons8_add_30;
+            btnThem.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThem.Location = new Point(952, 92);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(139, 45);
+            btnThem.TabIndex = 37;
+            btnThem.Text = "    Thêm";
+            btnThem.UseVisualStyleBackColor = true;
             // 
             // frTinhLuong
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1103, 635);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(comboBox1);
+            Controls.Add(btnXoa);
+            Controls.Add(btnSua);
+            Controls.Add(btnThem);
+            Controls.Add(cboSearch);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
             Controls.Add(dgvTinhLuong);
@@ -129,12 +129,12 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox cboSearch;
         private TextBox txtSearch;
         private Label lblSearch;
         private DataGridView dgvTinhLuong;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnXoa;
+        private Button btnSua;
+        private Button btnThem;
     }
 }

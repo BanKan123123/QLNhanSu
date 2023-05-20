@@ -1,6 +1,6 @@
-﻿namespace QLNhanSu.Tabs.Employees.FormChucVu.FeatureChucVu
+﻿namespace QLNhanSu.Tabs.Salary.FormPhat
 {
-    partial class FrXemChucVu
+    partial class FeatureLoaiCa
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Text = "FrAdd";
+            Text = "FeaturePhat";
         }
 
         #endregion

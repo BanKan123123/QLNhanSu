@@ -26,5 +26,10 @@ namespace QLNhanSu.Tabs.Employees
             dt = bindingSQL.BindingData(nameTable);
             dgvTrinhdo.DataSource = dt;
         }
+
+        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

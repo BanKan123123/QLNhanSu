@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblTitle = new Label();
             SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(213, 209);
-            label1.Name = "label1";
-            label1.Size = new Size(651, 62);
-            label1.TabIndex = 0;
-            label1.Text = "Welcome to Quản Lý Nhân Sự";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitle.Location = new Point(213, 209);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(651, 62);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Welcome to Quản Lý Nhân Sự";
             // 
             // frHome
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1121, 682);
-            Controls.Add(label1);
+            Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frHome";
             Text = "Trang chủ";
@@ -57,6 +57,6 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblTitle;
     }
 }

@@ -31,5 +31,6 @@ namespace QLNhanSu.Tabs.Salary
             dt = bindingSQL.BindingData(nameTable);
             dgvUngLuong.DataSource = dt;
         }
+
     }
 }

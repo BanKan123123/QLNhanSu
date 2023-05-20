@@ -93,9 +93,29 @@ namespace QLNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_change_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-change-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_company_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-company-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,6 +263,16 @@ namespace QLNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_part_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-part-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_position_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-position-30", resourceCulture);
@@ -276,6 +306,16 @@ namespace QLNhanSu.Properties {
         internal static System.Drawing.Bitmap icons8_timer_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-timer-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_transfer_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-transfer-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

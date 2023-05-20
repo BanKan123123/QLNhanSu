@@ -1,8 +1,11 @@
 ﻿using QLNhanSu.BindingSQL;
 using QLNhanSu.Tabs.Employees;
+using QLNhanSu.Tabs.Employees.FormBoPhan;
+using QLNhanSu.Tabs.Employees.FormDieuChuyen;
 using QLNhanSu.Tabs.Employees.FormTangLuong;
 using QLNhanSu.Tabs.Home;
 using QLNhanSu.Tabs.Other;
+using QLNhanSu.Tabs.Other.FormCongTy;
 using QLNhanSu.Tabs.Salary;
 using System;
 using System.Collections.Generic;
@@ -93,14 +96,14 @@ namespace QLNhanSu
             openChildFrom(new frUngLuong());
         }
 
-        private void btnThuong_Click(object sender, EventArgs e)
+        private void btnThuongPhat_Click(object sender, EventArgs e)
         {
-            openChildFrom(new frThuong());
+            openChildFrom(new frThuongPhat());
         }
 
-        private void btnPhat_Click(object sender, EventArgs e)
+        private void btnLoaiCa_Click(object sender, EventArgs e)
         {
-            openChildFrom(new frPhat());
+            openChildFrom(new frLoaiCa());
         }
 
         private void btnTangCa_Click(object sender, EventArgs e)
@@ -136,6 +139,21 @@ namespace QLNhanSu
         private void btnTangLuong_Click(object sender, EventArgs e)
         {
             openChildFrom(new frTangLuong());
+        }
+
+        private void btnBoPhan_Click(object sender, EventArgs e)
+        {
+            openChildFrom(new frBoPhan());
+        }
+
+        private void btnDieuChuyen_Click(object sender, EventArgs e)
+        {
+            openChildFrom(new frDieuChuyen());
+        }
+
+        private void btnCongTy_Click(object sender, EventArgs e)
+        {
+            openChildFrom(new frCongTy());
         }
     }
 }

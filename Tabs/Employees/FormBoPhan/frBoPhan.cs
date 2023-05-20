@@ -8,28 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNhanSu.Tabs.Salary
+namespace QLNhanSu.Tabs.Employees.FormBoPhan
 {
-    public partial class frThuong : Form
+    public partial class frBoPhan : Form
     {
-        private readonly string nameTable = "dbo.tbl_KhenThuongKyLuat";
+        private readonly string nameTable = "dbo.tbl_BoPhan";
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
-        public frThuong()
+        public frBoPhan()
         {
             InitializeComponent();
             BindingData();
         }
 
-        private void dgvThuong_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvBoPhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
         public void BindingData()
         {
             DataTable dt = new DataTable();
             dt = bindingSQL.BindingData(nameTable);
-            dgvThuong.DataSource = dt;
+            dgvBoPhan.DataSource = dt;
         }
+
     }
 }

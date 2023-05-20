@@ -35,24 +35,27 @@
             btnHome = new Button();
             btnChPassword = new Button();
             tpEmploy = new TabPage();
+            btnDieuChuyen = new Button();
+            btnBoPhan = new Button();
+            btnTangLuong = new Button();
             btnTrinhDo = new Button();
             btnDepart = new Button();
             btnPosition = new Button();
             btnEmploy = new Button();
             tpSalary = new TabPage();
             btnTinhLuong = new Button();
-            btnThuong = new Button();
+            btnThuongPhat = new Button();
             btnTangCa = new Button();
-            btnPhat = new Button();
+            btnLoaiCa = new Button();
             btnUngLuong = new Button();
             btnChamCong = new Button();
             tpOther = new TabPage();
+            btnCongTy = new Button();
             btnBaoHiem = new Button();
             btnHopDong = new Button();
             btnDanToc = new Button();
             btnTonGiao = new Button();
             pnlContainer = new Panel();
-            btnTangLuong = new Button();
             tclApp.SuspendLayout();
             tpSystem.SuspendLayout();
             tpEmploy.SuspendLayout();
@@ -123,23 +126,61 @@
             // 
             // tpEmploy
             // 
+            tpEmploy.Controls.Add(btnDieuChuyen);
+            tpEmploy.Controls.Add(btnBoPhan);
             tpEmploy.Controls.Add(btnTangLuong);
             tpEmploy.Controls.Add(btnTrinhDo);
             tpEmploy.Controls.Add(btnDepart);
             tpEmploy.Controls.Add(btnPosition);
             tpEmploy.Controls.Add(btnEmploy);
-            tpEmploy.Location = new Point(4, 32);
+            tpEmploy.Location = new Point(4, 29);
             tpEmploy.Name = "tpEmploy";
-            tpEmploy.Size = new Size(1292, 56);
+            tpEmploy.Size = new Size(1292, 59);
             tpEmploy.TabIndex = 3;
             tpEmploy.Text = "Nhân sự";
             tpEmploy.UseVisualStyleBackColor = true;
+            // 
+            // btnDieuChuyen
+            // 
+            btnDieuChuyen.Image = Properties.Resources.icons8_transfer_30;
+            btnDieuChuyen.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDieuChuyen.Location = new Point(1117, 0);
+            btnDieuChuyen.Name = "btnDieuChuyen";
+            btnDieuChuyen.Size = new Size(154, 56);
+            btnDieuChuyen.TabIndex = 8;
+            btnDieuChuyen.Text = "      Điều chuyển";
+            btnDieuChuyen.UseVisualStyleBackColor = true;
+            btnDieuChuyen.Click += btnDieuChuyen_Click;
+            // 
+            // btnBoPhan
+            // 
+            btnBoPhan.Image = Properties.Resources.icons8_part_30;
+            btnBoPhan.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBoPhan.Location = new Point(932, 0);
+            btnBoPhan.Name = "btnBoPhan";
+            btnBoPhan.Size = new Size(154, 56);
+            btnBoPhan.TabIndex = 7;
+            btnBoPhan.Text = "      Bộ Phận";
+            btnBoPhan.UseVisualStyleBackColor = true;
+            btnBoPhan.Click += btnBoPhan_Click;
+            // 
+            // btnTangLuong
+            // 
+            btnTangLuong.Image = Properties.Resources.icons8_increase_30;
+            btnTangLuong.ImageAlign = ContentAlignment.MiddleLeft;
+            btnTangLuong.Location = new Point(748, 0);
+            btnTangLuong.Name = "btnTangLuong";
+            btnTangLuong.Size = new Size(154, 56);
+            btnTangLuong.TabIndex = 6;
+            btnTangLuong.Text = "      Tăng Lương";
+            btnTangLuong.UseVisualStyleBackColor = true;
+            btnTangLuong.Click += btnTangLuong_Click;
             // 
             // btnTrinhDo
             // 
             btnTrinhDo.Image = Properties.Resources.icons8_level_30;
             btnTrinhDo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTrinhDo.Location = new Point(810, 0);
+            btnTrinhDo.Location = new Point(568, 0);
             btnTrinhDo.Name = "btnTrinhDo";
             btnTrinhDo.Size = new Size(154, 56);
             btnTrinhDo.TabIndex = 5;
@@ -151,7 +192,7 @@
             // 
             btnDepart.Image = Properties.Resources.icons8_department_30;
             btnDepart.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDepart.Location = new Point(567, 0);
+            btnDepart.Location = new Point(386, 0);
             btnDepart.Name = "btnDepart";
             btnDepart.Size = new Size(154, 56);
             btnDepart.TabIndex = 3;
@@ -163,7 +204,7 @@
             // 
             btnPosition.Image = Properties.Resources.icons8_position_30;
             btnPosition.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPosition.Location = new Point(324, 0);
+            btnPosition.Location = new Point(203, 0);
             btnPosition.Name = "btnPosition";
             btnPosition.Size = new Size(154, 56);
             btnPosition.TabIndex = 2;
@@ -175,7 +216,7 @@
             // 
             btnEmploy.Image = Properties.Resources.icons8_employee_30;
             btnEmploy.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEmploy.Location = new Point(88, 0);
+            btnEmploy.Location = new Point(23, 0);
             btnEmploy.Name = "btnEmploy";
             btnEmploy.Size = new Size(154, 56);
             btnEmploy.TabIndex = 1;
@@ -186,9 +227,9 @@
             // tpSalary
             // 
             tpSalary.Controls.Add(btnTinhLuong);
-            tpSalary.Controls.Add(btnThuong);
+            tpSalary.Controls.Add(btnThuongPhat);
             tpSalary.Controls.Add(btnTangCa);
-            tpSalary.Controls.Add(btnPhat);
+            tpSalary.Controls.Add(btnLoaiCa);
             tpSalary.Controls.Add(btnUngLuong);
             tpSalary.Controls.Add(btnChamCong);
             tpSalary.Location = new Point(4, 32);
@@ -211,17 +252,17 @@
             btnTinhLuong.UseVisualStyleBackColor = true;
             btnTinhLuong.Click += btnTinhLuong_Click;
             // 
-            // btnThuong
+            // btnThuongPhat
             // 
-            btnThuong.Image = Properties.Resources.icons8_bonus_30;
-            btnThuong.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThuong.Location = new Point(463, 0);
-            btnThuong.Name = "btnThuong";
-            btnThuong.Size = new Size(154, 56);
-            btnThuong.TabIndex = 5;
-            btnThuong.Text = "      Thưởng";
-            btnThuong.UseVisualStyleBackColor = true;
-            btnThuong.Click += btnThuong_Click;
+            btnThuongPhat.Image = Properties.Resources.icons8_bonus_30;
+            btnThuongPhat.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThuongPhat.Location = new Point(463, 0);
+            btnThuongPhat.Name = "btnThuongPhat";
+            btnThuongPhat.Size = new Size(154, 56);
+            btnThuongPhat.TabIndex = 5;
+            btnThuongPhat.Text = "      Thưởng, Phạt";
+            btnThuongPhat.UseVisualStyleBackColor = true;
+            btnThuongPhat.Click += btnThuongPhat_Click;
             // 
             // btnTangCa
             // 
@@ -235,17 +276,17 @@
             btnTangCa.UseVisualStyleBackColor = true;
             btnTangCa.Click += btnTangCa_Click;
             // 
-            // btnPhat
+            // btnLoaiCa
             // 
-            btnPhat.Image = Properties.Resources.icons8_soccer_yellow_card_30;
-            btnPhat.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPhat.Location = new Point(670, 0);
-            btnPhat.Name = "btnPhat";
-            btnPhat.Size = new Size(154, 56);
-            btnPhat.TabIndex = 3;
-            btnPhat.Text = "      Phạt";
-            btnPhat.UseVisualStyleBackColor = true;
-            btnPhat.Click += btnPhat_Click;
+            btnLoaiCa.Image = Properties.Resources.icons8_soccer_yellow_card_30;
+            btnLoaiCa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLoaiCa.Location = new Point(670, 0);
+            btnLoaiCa.Name = "btnLoaiCa";
+            btnLoaiCa.Size = new Size(154, 56);
+            btnLoaiCa.TabIndex = 3;
+            btnLoaiCa.Text = "      Loại Ca";
+            btnLoaiCa.UseVisualStyleBackColor = true;
+            btnLoaiCa.Click += btnLoaiCa_Click;
             // 
             // btnUngLuong
             // 
@@ -273,6 +314,7 @@
             // 
             // tpOther
             // 
+            tpOther.Controls.Add(btnCongTy);
             tpOther.Controls.Add(btnBaoHiem);
             tpOther.Controls.Add(btnHopDong);
             tpOther.Controls.Add(btnDanToc);
@@ -284,11 +326,23 @@
             tpOther.Text = "Khác";
             tpOther.UseVisualStyleBackColor = true;
             // 
+            // btnCongTy
+            // 
+            btnCongTy.Image = Properties.Resources.icons8_company_30;
+            btnCongTy.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCongTy.Location = new Point(1039, 0);
+            btnCongTy.Name = "btnCongTy";
+            btnCongTy.Size = new Size(154, 56);
+            btnCongTy.TabIndex = 6;
+            btnCongTy.Text = "      Công ty";
+            btnCongTy.UseVisualStyleBackColor = true;
+            btnCongTy.Click += btnCongTy_Click;
+            // 
             // btnBaoHiem
             // 
             btnBaoHiem.Image = Properties.Resources.icons8_insurance_30;
             btnBaoHiem.ImageAlign = ContentAlignment.MiddleLeft;
-            btnBaoHiem.Location = new Point(1008, 0);
+            btnBaoHiem.Location = new Point(799, 0);
             btnBaoHiem.Name = "btnBaoHiem";
             btnBaoHiem.Size = new Size(154, 56);
             btnBaoHiem.TabIndex = 5;
@@ -300,7 +354,7 @@
             // 
             btnHopDong.Image = Properties.Resources.icons8_contract_30;
             btnHopDong.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHopDong.Location = new Point(734, 0);
+            btnHopDong.Location = new Point(560, 0);
             btnHopDong.Name = "btnHopDong";
             btnHopDong.Size = new Size(154, 56);
             btnHopDong.TabIndex = 3;
@@ -312,7 +366,7 @@
             // 
             btnDanToc.Image = Properties.Resources.icons8_nation_30;
             btnDanToc.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDanToc.Location = new Point(437, 0);
+            btnDanToc.Location = new Point(318, 0);
             btnDanToc.Name = "btnDanToc";
             btnDanToc.Size = new Size(154, 56);
             btnDanToc.TabIndex = 2;
@@ -324,7 +378,7 @@
             // 
             btnTonGiao.Image = Properties.Resources.icons8_religion_30;
             btnTonGiao.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTonGiao.Location = new Point(136, 0);
+            btnTonGiao.Location = new Point(88, 0);
             btnTonGiao.Name = "btnTonGiao";
             btnTonGiao.Size = new Size(154, 56);
             btnTonGiao.TabIndex = 2;
@@ -338,18 +392,6 @@
             pnlContainer.Name = "pnlContainer";
             pnlContainer.Size = new Size(1292, 682);
             pnlContainer.TabIndex = 1;
-            // 
-            // btnTangLuong
-            // 
-            btnTangLuong.Image = Properties.Resources.icons8_increase_30;
-            btnTangLuong.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTangLuong.Location = new Point(1051, 0);
-            btnTangLuong.Name = "btnTangLuong";
-            btnTangLuong.Size = new Size(154, 56);
-            btnTangLuong.TabIndex = 6;
-            btnTangLuong.Text = "      Tăng Lương";
-            btnTangLuong.UseVisualStyleBackColor = true;
-            btnTangLuong.Click += btnTangLuong_Click;
             // 
             // Main
             // 
@@ -385,9 +427,8 @@
         private Button btnPosition;
         private Button btnDepart;
         private Button btnTinhLuong;
-        private Button btnThuong;
+        private Button btnThuongPhat;
         private Button btnTangCa;
-        private Button btnPhat;
         private Button btnUngLuong;
         private Button btnBaoHiem;
         private Button btnHopDong;
@@ -396,5 +437,9 @@
         private Button btnTrinhDo;
         private Panel pnlContainer;
         private Button btnTangLuong;
+        private Button btnDieuChuyen;
+        private Button btnBoPhan;
+        private Button btnCongTy;
+        private Button btnLoaiCa;
     }
 }

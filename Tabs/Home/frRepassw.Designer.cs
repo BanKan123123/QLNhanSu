@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblOldPassword = new Label();
             txtOldPassword = new TextBox();
             lblTitle = new Label();
             txtNewPassword = new TextBox();
-            label3 = new Label();
+            lblNewPassword = new Label();
             txtRePassword = new TextBox();
-            label4 = new Label();
+            lblRepassword = new Label();
             btnSave = new Button();
             btnCancel = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lblOldPassword
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(162, 114);
-            label1.Name = "label1";
-            label1.Size = new Size(119, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Mật khẩu cũ";
+            lblOldPassword.AutoSize = true;
+            lblOldPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblOldPassword.Location = new Point(162, 114);
+            lblOldPassword.Name = "lblOldPassword";
+            lblOldPassword.Size = new Size(119, 28);
+            lblOldPassword.TabIndex = 0;
+            lblOldPassword.Text = "Mật khẩu cũ";
             // 
             // txtOldPassword
             // 
@@ -78,15 +78,15 @@
             txtNewPassword.Size = new Size(257, 34);
             txtNewPassword.TabIndex = 4;
             // 
-            // label3
+            // lblNewPassword
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(162, 182);
-            label3.Name = "label3";
-            label3.Size = new Size(133, 28);
-            label3.TabIndex = 3;
-            label3.Text = "Mật khẩu mới";
+            lblNewPassword.AutoSize = true;
+            lblNewPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNewPassword.Location = new Point(162, 182);
+            lblNewPassword.Name = "lblNewPassword";
+            lblNewPassword.Size = new Size(133, 28);
+            lblNewPassword.TabIndex = 3;
+            lblNewPassword.Text = "Mật khẩu mới";
             // 
             // txtRePassword
             // 
@@ -96,15 +96,15 @@
             txtRePassword.Size = new Size(257, 34);
             txtRePassword.TabIndex = 6;
             // 
-            // label4
+            // lblRepassword
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(162, 250);
-            label4.Name = "label4";
-            label4.Size = new Size(171, 28);
-            label4.TabIndex = 5;
-            label4.Text = "Nhập lại mật khẩu";
+            lblRepassword.AutoSize = true;
+            lblRepassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRepassword.Location = new Point(162, 250);
+            lblRepassword.Name = "lblRepassword";
+            lblRepassword.Size = new Size(171, 28);
+            lblRepassword.TabIndex = 5;
+            lblRepassword.Text = "Nhập lại mật khẩu";
             // 
             // btnSave
             // 
@@ -136,12 +136,12 @@
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(txtRePassword);
-            Controls.Add(label4);
+            Controls.Add(lblRepassword);
             Controls.Add(txtNewPassword);
-            Controls.Add(label3);
+            Controls.Add(lblNewPassword);
             Controls.Add(lblTitle);
             Controls.Add(txtOldPassword);
-            Controls.Add(label1);
+            Controls.Add(lblOldPassword);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frChPassword";
             Text = "Thay đổi mật khẩu";
@@ -151,13 +151,13 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblOldPassword;
         private TextBox txtOldPassword;
         private Label lblTitle;
         private TextBox txtNewPassword;
-        private Label label3;
+        private Label lblNewPassword;
         private TextBox txtRePassword;
-        private Label label4;
+        private Label lblRepassword;
         private Button btnSave;
         private Button btnCancel;
     }

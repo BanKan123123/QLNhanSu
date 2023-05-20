@@ -28,57 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            comboBox1 = new ComboBox();
+            btnXoa = new Button();
+            btnSua = new Button();
+            btnThem = new Button();
+            cboSearch = new ComboBox();
             txtSearch = new TextBox();
             lblSearch = new Label();
             dgvTangLuong = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvTangLuong).BeginInit();
             SuspendLayout();
             // 
-            // button3
+            // btnXoa
             // 
-            button3.Image = Properties.Resources.icons8_delete_30;
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(939, 226);
-            button3.Name = "button3";
-            button3.Size = new Size(152, 45);
-            button3.TabIndex = 40;
-            button3.Text = "    Xóa";
-            button3.UseVisualStyleBackColor = true;
+            btnXoa.Image = Properties.Resources.icons8_delete_30;
+            btnXoa.ImageAlign = ContentAlignment.MiddleLeft;
+            btnXoa.Location = new Point(939, 226);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(152, 45);
+            btnXoa.TabIndex = 40;
+            btnXoa.Text = "    Xóa";
+            btnXoa.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSua
             // 
-            button2.Image = Properties.Resources.icons8_edit_30;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(939, 159);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 45);
-            button2.TabIndex = 39;
-            button2.Text = "    Sửa";
-            button2.UseVisualStyleBackColor = true;
+            btnSua.Image = Properties.Resources.icons8_edit_30;
+            btnSua.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSua.Location = new Point(939, 159);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(152, 45);
+            btnSua.TabIndex = 39;
+            btnSua.Text = "    Sửa";
+            btnSua.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnThem
             // 
-            button1.Image = Properties.Resources.icons8_add_30;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(939, 92);
-            button1.Name = "button1";
-            button1.Size = new Size(152, 45);
-            button1.TabIndex = 38;
-            button1.Text = "    Thêm";
-            button1.UseVisualStyleBackColor = true;
+            btnThem.Image = Properties.Resources.icons8_add_30;
+            btnThem.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThem.Location = new Point(939, 92);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(152, 45);
+            btnThem.TabIndex = 38;
+            btnThem.Text = "    Thêm";
+            btnThem.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cboSearch
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Tất cả", "Nam", "Nữ" });
-            comboBox1.Location = new Point(759, 37);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 43;
+            cboSearch.FormattingEnabled = true;
+            cboSearch.Items.AddRange(new object[] { "Tất cả", "Nam", "Nữ" });
+            cboSearch.Location = new Point(759, 37);
+            cboSearch.Name = "cboSearch";
+            cboSearch.Size = new Size(151, 28);
+            cboSearch.TabIndex = 43;
             // 
             // txtSearch
             // 
@@ -113,12 +113,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1103, 635);
             Controls.Add(dgvTangLuong);
-            Controls.Add(comboBox1);
+            Controls.Add(cboSearch);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnXoa);
+            Controls.Add(btnSua);
+            Controls.Add(btnThem);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frTangLuong";
             Text = "frTangLuong";
@@ -130,10 +130,10 @@
 
         #endregion
 
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private ComboBox comboBox1;
+        private Button btnXoa;
+        private Button btnSua;
+        private Button btnThem;
+        private ComboBox cboSearch;
         private TextBox txtSearch;
         private Label lblSearch;
         private DataGridView dgvTangLuong;

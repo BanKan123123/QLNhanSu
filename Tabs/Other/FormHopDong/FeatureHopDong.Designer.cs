@@ -28,45 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblShd = new Label();
             txtSoHopDong = new TextBox();
-            label2 = new Label();
+            lblNguoiDaiDien = new Label();
             cboNguoiDaiDien = new ComboBox();
             cboNhanVien = new ComboBox();
-            label3 = new Label();
+            lblNhanVien = new Label();
             dtpNgayBatDau = new DateTimePicker();
-            label4 = new Label();
-            label5 = new Label();
+            lblNgayBatDau = new Label();
+            lblNgayKetThuc = new Label();
             dtpNgayKetThuc = new DateTimePicker();
-            label6 = new Label();
+            lblNgayKy = new Label();
             dtpNgayKy = new DateTimePicker();
             txtThoiHan = new TextBox();
-            label7 = new Label();
+            lblThoiHan = new Label();
             txtLanKy = new TextBox();
-            label8 = new Label();
+            lblLanKy = new Label();
             txtHeSoLuong = new TextBox();
-            label9 = new Label();
+            lblHsl = new Label();
             txtLoaiHopDong = new TextBox();
-            label10 = new Label();
+            lblLoaiHd = new Label();
             txtLuongCoBan = new TextBox();
-            label11 = new Label();
+            lblLuongCoBan = new Label();
             txtNoiDung = new TextBox();
-            label12 = new Label();
+            lblNoiDung = new Label();
             btnThemHopDong = new Button();
             btnHuy = new Button();
             btnReset = new Button();
             lblTitleHopDong = new Label();
+            ptbCancel = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)ptbCancel).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblShd
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(166, 102);
-            label1.Name = "label1";
-            label1.Size = new Size(113, 23);
-            label1.TabIndex = 0;
-            label1.Text = "Số hợp đồng:";
+            lblShd.AutoSize = true;
+            lblShd.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblShd.Location = new Point(166, 102);
+            lblShd.Name = "lblShd";
+            lblShd.Size = new Size(113, 23);
+            lblShd.TabIndex = 0;
+            lblShd.Text = "Số hợp đồng:";
             // 
             // txtSoHopDong
             // 
@@ -75,15 +77,15 @@
             txtSoHopDong.Size = new Size(468, 30);
             txtSoHopDong.TabIndex = 1;
             // 
-            // label2
+            // lblNguoiDaiDien
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(166, 157);
-            label2.Name = "label2";
-            label2.Size = new Size(127, 23);
-            label2.TabIndex = 2;
-            label2.Text = "Người đại diện:";
+            lblNguoiDaiDien.AutoSize = true;
+            lblNguoiDaiDien.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNguoiDaiDien.Location = new Point(166, 157);
+            lblNguoiDaiDien.Name = "lblNguoiDaiDien";
+            lblNguoiDaiDien.Size = new Size(127, 23);
+            lblNguoiDaiDien.TabIndex = 2;
+            lblNguoiDaiDien.Text = "Người đại diện:";
             // 
             // cboNguoiDaiDien
             // 
@@ -101,15 +103,15 @@
             cboNhanVien.Size = new Size(468, 31);
             cboNhanVien.TabIndex = 5;
             // 
-            // label3
+            // lblNhanVien
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(166, 214);
-            label3.Name = "label3";
-            label3.Size = new Size(95, 23);
-            label3.TabIndex = 4;
-            label3.Text = "Nhân Viên:";
+            lblNhanVien.AutoSize = true;
+            lblNhanVien.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNhanVien.Location = new Point(166, 214);
+            lblNhanVien.Name = "lblNhanVien";
+            lblNhanVien.Size = new Size(95, 23);
+            lblNhanVien.TabIndex = 4;
+            lblNhanVien.Text = "Nhân Viên:";
             // 
             // dtpNgayBatDau
             // 
@@ -119,25 +121,25 @@
             dtpNgayBatDau.Size = new Size(132, 30);
             dtpNgayBatDau.TabIndex = 6;
             // 
-            // label4
+            // lblNgayBatDau
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(166, 276);
-            label4.Name = "label4";
-            label4.Size = new Size(118, 23);
-            label4.TabIndex = 7;
-            label4.Text = "Ngày bắt đầu:";
+            lblNgayBatDau.AutoSize = true;
+            lblNgayBatDau.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNgayBatDau.Location = new Point(166, 276);
+            lblNgayBatDau.Name = "lblNgayBatDau";
+            lblNgayBatDau.Size = new Size(118, 23);
+            lblNgayBatDau.TabIndex = 7;
+            lblNgayBatDau.Text = "Ngày bắt đầu:";
             // 
-            // label5
+            // lblNgayKetThuc
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(502, 276);
-            label5.Name = "label5";
-            label5.Size = new Size(121, 23);
-            label5.TabIndex = 9;
-            label5.Text = "Ngày kết thúc:";
+            lblNgayKetThuc.AutoSize = true;
+            lblNgayKetThuc.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNgayKetThuc.Location = new Point(502, 276);
+            lblNgayKetThuc.Name = "lblNgayKetThuc";
+            lblNgayKetThuc.Size = new Size(121, 23);
+            lblNgayKetThuc.TabIndex = 9;
+            lblNgayKetThuc.Text = "Ngày kết thúc:";
             // 
             // dtpNgayKetThuc
             // 
@@ -147,15 +149,15 @@
             dtpNgayKetThuc.Size = new Size(132, 30);
             dtpNgayKetThuc.TabIndex = 8;
             // 
-            // label6
+            // lblNgayKy
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(166, 334);
-            label6.Name = "label6";
-            label6.Size = new Size(75, 23);
-            label6.TabIndex = 11;
-            label6.Text = "Ngày ký:";
+            lblNgayKy.AutoSize = true;
+            lblNgayKy.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNgayKy.Location = new Point(166, 334);
+            lblNgayKy.Name = "lblNgayKy";
+            lblNgayKy.Size = new Size(75, 23);
+            lblNgayKy.TabIndex = 11;
+            lblNgayKy.Text = "Ngày ký:";
             // 
             // dtpNgayKy
             // 
@@ -172,15 +174,15 @@
             txtThoiHan.Size = new Size(132, 30);
             txtThoiHan.TabIndex = 13;
             // 
-            // label7
+            // lblThoiHan
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(502, 334);
-            label7.Name = "label7";
-            label7.Size = new Size(81, 23);
-            label7.TabIndex = 12;
-            label7.Text = "Thời hạn:";
+            lblThoiHan.AutoSize = true;
+            lblThoiHan.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblThoiHan.Location = new Point(502, 334);
+            lblThoiHan.Name = "lblThoiHan";
+            lblThoiHan.Size = new Size(81, 23);
+            lblThoiHan.TabIndex = 12;
+            lblThoiHan.Text = "Thời hạn:";
             // 
             // txtLanKy
             // 
@@ -189,15 +191,15 @@
             txtLanKy.Size = new Size(132, 30);
             txtLanKy.TabIndex = 15;
             // 
-            // label8
+            // lblLanKy
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(166, 389);
-            label8.Name = "label8";
-            label8.Size = new Size(62, 23);
-            label8.TabIndex = 14;
-            label8.Text = "Lần ký:";
+            lblLanKy.AutoSize = true;
+            lblLanKy.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLanKy.Location = new Point(166, 389);
+            lblLanKy.Name = "lblLanKy";
+            lblLanKy.Size = new Size(62, 23);
+            lblLanKy.TabIndex = 14;
+            lblLanKy.Text = "Lần ký:";
             // 
             // txtHeSoLuong
             // 
@@ -206,15 +208,15 @@
             txtHeSoLuong.Size = new Size(132, 30);
             txtHeSoLuong.TabIndex = 17;
             // 
-            // label9
+            // lblHsl
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(502, 389);
-            label9.Name = "label9";
-            label9.Size = new Size(106, 23);
-            label9.TabIndex = 16;
-            label9.Text = "Hệ số lương:";
+            lblHsl.AutoSize = true;
+            lblHsl.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHsl.Location = new Point(502, 389);
+            lblHsl.Name = "lblHsl";
+            lblHsl.Size = new Size(106, 23);
+            lblHsl.TabIndex = 16;
+            lblHsl.Text = "Hệ số lương:";
             // 
             // txtLoaiHopDong
             // 
@@ -223,15 +225,15 @@
             txtLoaiHopDong.Size = new Size(468, 30);
             txtLoaiHopDong.TabIndex = 19;
             // 
-            // label10
+            // lblLoaiHd
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(166, 510);
-            label10.Name = "label10";
-            label10.Size = new Size(125, 23);
-            label10.TabIndex = 18;
-            label10.Text = "Loại hợp đồng:";
+            lblLoaiHd.AutoSize = true;
+            lblLoaiHd.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLoaiHd.Location = new Point(166, 510);
+            lblLoaiHd.Name = "lblLoaiHd";
+            lblLoaiHd.Size = new Size(125, 23);
+            lblLoaiHd.TabIndex = 18;
+            lblLoaiHd.Text = "Loại hợp đồng:";
             // 
             // txtLuongCoBan
             // 
@@ -240,15 +242,15 @@
             txtLuongCoBan.Size = new Size(468, 30);
             txtLuongCoBan.TabIndex = 21;
             // 
-            // label11
+            // lblLuongCoBan
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(166, 452);
-            label11.Name = "label11";
-            label11.Size = new Size(119, 23);
-            label11.TabIndex = 20;
-            label11.Text = "Lương cơ bản:";
+            lblLuongCoBan.AutoSize = true;
+            lblLuongCoBan.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLuongCoBan.Location = new Point(166, 452);
+            lblLuongCoBan.Name = "lblLuongCoBan";
+            lblLuongCoBan.Size = new Size(119, 23);
+            lblLuongCoBan.TabIndex = 20;
+            lblLuongCoBan.Text = "Lương cơ bản:";
             // 
             // txtNoiDung
             // 
@@ -259,15 +261,15 @@
             txtNoiDung.Size = new Size(468, 119);
             txtNoiDung.TabIndex = 23;
             // 
-            // label12
+            // lblNoiDung
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(166, 571);
-            label12.Name = "label12";
-            label12.Size = new Size(86, 23);
-            label12.TabIndex = 22;
-            label12.Text = "Nội dung:";
+            lblNoiDung.AutoSize = true;
+            lblNoiDung.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNoiDung.Location = new Point(166, 571);
+            lblNoiDung.Name = "lblNoiDung";
+            lblNoiDung.Size = new Size(86, 23);
+            lblNoiDung.TabIndex = 22;
+            lblNoiDung.Text = "Nội dung:";
             // 
             // btnThemHopDong
             // 
@@ -304,82 +306,97 @@
             // 
             lblTitleHopDong.AutoSize = true;
             lblTitleHopDong.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitleHopDong.Location = new Point(407, 28);
+            lblTitleHopDong.Location = new Point(407, 12);
             lblTitleHopDong.Name = "lblTitleHopDong";
             lblTitleHopDong.Size = new Size(216, 38);
             lblTitleHopDong.TabIndex = 28;
             lblTitleHopDong.Text = "Thêm hợp đồng";
+            // 
+            // ptbCancel
+            // 
+            ptbCancel.Image = Properties.Resources.icons8_cancel_30;
+            ptbCancel.Location = new Point(943, 12);
+            ptbCancel.Name = "ptbCancel";
+            ptbCancel.Size = new Size(30, 30);
+            ptbCancel.SizeMode = PictureBoxSizeMode.AutoSize;
+            ptbCancel.TabIndex = 29;
+            ptbCancel.TabStop = false;
+            ptbCancel.Click += ptbCancel_Click;
             // 
             // FeatureHopDong
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(985, 780);
+            Controls.Add(ptbCancel);
             Controls.Add(lblTitleHopDong);
             Controls.Add(btnReset);
             Controls.Add(btnHuy);
             Controls.Add(btnThemHopDong);
             Controls.Add(txtNoiDung);
-            Controls.Add(label12);
+            Controls.Add(lblNoiDung);
             Controls.Add(txtLuongCoBan);
-            Controls.Add(label11);
+            Controls.Add(lblLuongCoBan);
             Controls.Add(txtLoaiHopDong);
-            Controls.Add(label10);
+            Controls.Add(lblLoaiHd);
             Controls.Add(txtHeSoLuong);
-            Controls.Add(label9);
+            Controls.Add(lblHsl);
             Controls.Add(txtLanKy);
-            Controls.Add(label8);
+            Controls.Add(lblLanKy);
             Controls.Add(txtThoiHan);
-            Controls.Add(label7);
-            Controls.Add(label6);
+            Controls.Add(lblThoiHan);
+            Controls.Add(lblNgayKy);
             Controls.Add(dtpNgayKy);
-            Controls.Add(label5);
+            Controls.Add(lblNgayKetThuc);
             Controls.Add(dtpNgayKetThuc);
-            Controls.Add(label4);
+            Controls.Add(lblNgayBatDau);
             Controls.Add(dtpNgayBatDau);
             Controls.Add(cboNhanVien);
-            Controls.Add(label3);
+            Controls.Add(lblNhanVien);
             Controls.Add(cboNguoiDaiDien);
-            Controls.Add(label2);
+            Controls.Add(lblNguoiDaiDien);
             Controls.Add(txtSoHopDong);
-            Controls.Add(label1);
+            Controls.Add(lblShd);
             Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FeatureHopDong";
             Text = "FeatureHopDong";
             Load += FeatureHopDong_Load;
+            ((System.ComponentModel.ISupportInitialize)ptbCancel).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Label lblShd;
         private TextBox txtSoHopDong;
-        private Label label2;
+        private Label lblNguoiDaiDien;
         private ComboBox cboNguoiDaiDien;
         private ComboBox cboNhanVien;
-        private Label label3;
+        private Label lblNhanVien;
         private DateTimePicker dtpNgayBatDau;
-        private Label label4;
-        private Label label5;
+        private Label lblNgayBatDau;
+        private Label lblNgayKetThuc;
         private DateTimePicker dtpNgayKetThuc;
-        private Label label6;
+        private Label lblNgayKy;
         private DateTimePicker dtpNgayKy;
         private TextBox txtThoiHan;
-        private Label label7;
+        private Label lblThoiHan;
         private TextBox txtLanKy;
-        private Label label8;
+        private Label lblLanKy;
         private TextBox txtHeSoLuong;
-        private Label label9;
+        private Label lblHsl;
         private TextBox txtLoaiHopDong;
-        private Label label10;
+        private Label lblLoaiHd;
         private TextBox txtLuongCoBan;
-        private Label label11;
+        private Label lblLuongCoBan;
         private TextBox txtNoiDung;
-        private Label label12;
+        private Label lblNoiDung;
         private Button btnThemHopDong;
         private Button btnHuy;
         private Button btnReset;
         private Label lblTitleHopDong;
+        private PictureBox ptbCancel;
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNhanSu.Tabs.Salary.FormPhat
+namespace QLNhanSu.Tabs.Other.FormCongTy
 {
-    public partial class FeaturePhat : Form
+    public partial class frCongTy : Form
     {
-        public FeaturePhat()
+        public frCongTy()
         {
             InitializeComponent();
         }

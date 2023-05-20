@@ -28,12 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FeatureUngLuong";
+            lblTitle = new Label();
+            ptbCancel = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)ptbCancel).BeginInit();
+            SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitle.Location = new Point(334, 9);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(133, 31);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Bảng lương";
+            // 
+            // ptbCancel
+            // 
+            ptbCancel.Image = Properties.Resources.icons8_cancel_30;
+            ptbCancel.Location = new Point(758, 9);
+            ptbCancel.Name = "ptbCancel";
+            ptbCancel.Size = new Size(30, 30);
+            ptbCancel.SizeMode = PictureBoxSizeMode.AutoSize;
+            ptbCancel.TabIndex = 1;
+            ptbCancel.TabStop = false;
+            // 
+            // FeatureTinhLuong
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(ptbCancel);
+            Controls.Add(lblTitle);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FeatureTinhLuong";
+            Text = "FeatureTinhLuong";
+            ((System.ComponentModel.ISupportInitialize)ptbCancel).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblTitle;
+        private PictureBox ptbCancel;
     }
 }

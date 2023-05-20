@@ -16,5 +16,6 @@ namespace QLNhanSu.Tabs.Employees.FormPhongBan
         {
             InitializeComponent();
         }
+
     }
 }

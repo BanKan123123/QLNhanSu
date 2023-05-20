@@ -258,10 +258,16 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
             if (btnThemHopDong.Text.Trim().Equals("Thêm"))
             {
                 ThemHopDong();
-            } if (btnThemHopDong.Text.Trim().Equals("Sửa"))
+            }
+            if (btnThemHopDong.Text.Trim().Equals("Sửa"))
             {
                 SuaHopDong();
             }
+        }
+
+        private void ptbCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

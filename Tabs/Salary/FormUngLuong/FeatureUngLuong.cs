@@ -16,5 +16,10 @@ namespace QLNhanSu.Tabs.Salary.FormUngLuong
         {
             InitializeComponent();
         }
+
+        private void ptbCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

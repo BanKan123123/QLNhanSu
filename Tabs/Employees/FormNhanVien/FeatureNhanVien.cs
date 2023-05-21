@@ -18,7 +18,6 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
     public partial class FeatureNhanVIen : Form
     {
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
-        frEmploy employ = new frEmploy();
         int id;
         public FeatureNhanVIen()
         {
@@ -91,7 +90,7 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
             if(btnThemNhanVien.Text.Trim().Equals("Thêm"))
             {
                 ThemNhanVien();
-
+              
             } if (btnThemNhanVien.Text.Trim().Equals("Sửa"))
             {
                 SuaNhanVien();
@@ -309,6 +308,9 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
                 {
                     string query = "INSERT INTO tbl_NhanVien VALUES ('" + ten + "' , '" + gioiTinh + "' ,  '" + ngaySinh + "' , '" + dienThoai + "' , '" + cccd + "'  , '" + diaChi + "' , '" + idpb + "' , '" + idbp + "' , '" + idcv + "' , '" + idtd + "', '" + iddt + "' , '" + idtg + "' , '" + 1 + "'  , '" + "" + "' )";
                     bindingSQL.ThemNhanVien(query);
+                    frEmploy employ = new frEmploy();
+                    employ.Close();
+                    employ.Show();
                     this.Close();
                     reset();
                 }

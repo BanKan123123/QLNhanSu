@@ -12,7 +12,7 @@ namespace QLNhanSu.Tabs.Employees.FormDieuChuyen
 {
     public partial class frDieuChuyen : Form
     {
-        private readonly string nameTable = "dbo.tbl_DieuChuyen";
+        private readonly string nameTable = "tbl_DieuChuyen";
         QLNhanSu.BindingSQL.BindingSQL bindingSQL = new BindingSQL.BindingSQL();
         public frDieuChuyen()
         {
@@ -25,6 +25,23 @@ namespace QLNhanSu.Tabs.Employees.FormDieuChuyen
             DataTable dt = new DataTable();
             dt = bindingSQL.BindingData(nameTable);
             dgvDieuChuyen.DataSource = dt;
+        }
+
+        private void dgvDieuChuyen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frDieuChuyen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDieuChuyen_Click(object sender, EventArgs e)
+        {
+            FeatureDieuChuyen featureDieuChuyen = new FeatureDieuChuyen();
+            featureDieuChuyen.Show();
+            featureDieuChuyen.SetTextForm(btnDieuChuyen.Text.Trim());
         }
     }
 }

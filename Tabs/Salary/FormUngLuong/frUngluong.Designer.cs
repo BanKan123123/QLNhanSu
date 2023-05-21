@@ -123,6 +123,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frUngLuong";
             Text = "Ứng lương";
+            Load += frUngLuong_Load;
             ((System.ComponentModel.ISupportInitialize)dgvUngLuong).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -33,7 +33,7 @@
             lblSearch = new Label();
             btnXoa = new Button();
             btnSua = new Button();
-            btnThem = new Button();
+            btnDieuChuyen = new Button();
             dgvDieuChuyen = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvDieuChuyen).BeginInit();
             SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             lblSearch.AutoSize = true;
             lblSearch.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblSearch.Location = new Point(443, 35);
+            lblSearch.Location = new Point(443, 38);
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(84, 25);
             lblSearch.TabIndex = 12;
@@ -86,16 +86,17 @@
             btnSua.Text = "    Sửa";
             btnSua.UseVisualStyleBackColor = true;
             // 
-            // btnThem
+            // btnDieuChuyen
             // 
-            btnThem.Image = Properties.Resources.icons8_add_30;
-            btnThem.ImageAlign = ContentAlignment.MiddleLeft;
-            btnThem.Location = new Point(952, 92);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(139, 45);
-            btnThem.TabIndex = 22;
-            btnThem.Text = "    Thêm";
-            btnThem.UseVisualStyleBackColor = true;
+            btnDieuChuyen.Image = Properties.Resources.icons8_add_30;
+            btnDieuChuyen.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDieuChuyen.Location = new Point(952, 92);
+            btnDieuChuyen.Name = "btnDieuChuyen";
+            btnDieuChuyen.Size = new Size(139, 45);
+            btnDieuChuyen.TabIndex = 22;
+            btnDieuChuyen.Text = "      Điều chuyển";
+            btnDieuChuyen.UseVisualStyleBackColor = true;
+            btnDieuChuyen.Click += btnDieuChuyen_Click;
             // 
             // dgvDieuChuyen
             // 
@@ -106,6 +107,7 @@
             dgvDieuChuyen.RowTemplate.Height = 29;
             dgvDieuChuyen.Size = new Size(910, 543);
             dgvDieuChuyen.TabIndex = 25;
+            dgvDieuChuyen.CellContentClick += dgvDieuChuyen_CellContentClick;
             // 
             // frDieuChuyen
             // 
@@ -115,13 +117,14 @@
             Controls.Add(dgvDieuChuyen);
             Controls.Add(btnXoa);
             Controls.Add(btnSua);
-            Controls.Add(btnThem);
+            Controls.Add(btnDieuChuyen);
             Controls.Add(cboSearch);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frDieuChuyen";
             Text = "frDieuChuyen";
+            Load += frDieuChuyen_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDieuChuyen).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -134,7 +137,7 @@
         private Label lblSearch;
         private Button btnXoa;
         private Button btnSua;
-        private Button btnThem;
+        private Button btnDieuChuyen;
         private DataGridView dgvDieuChuyen;
     }
 }

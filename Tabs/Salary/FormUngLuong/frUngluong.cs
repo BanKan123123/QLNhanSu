@@ -32,5 +32,9 @@ namespace QLNhanSu.Tabs.Salary
             dgvUngLuong.DataSource = dt;
         }
 
+        private void frUngLuong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace QLNhanSu.Tabs.Employees
             DataTable dt = new DataTable();
             dt = bindingSQL.BindingData(nameTable);
             dgvNhanvien.DataSource = dt;
+            MessageBox.Show("123");
         }
         private void frEmploy_Load(object sender, EventArgs e)
         {

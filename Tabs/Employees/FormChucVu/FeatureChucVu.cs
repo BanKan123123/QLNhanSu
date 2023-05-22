@@ -92,7 +92,7 @@ namespace QLNhanSu.Tabs.Employees.FormChucVu.FeatureChucVu
 
                 try
                 {
-                    string query = "INSERT INTO tbl_ChucVu VALUES ('" + ten + "')";
+                    string query = "INSERT INTO tbl_ChucVu VALUES ('N" + ten + "')";
                     bindingSQL.ThemNhanVien(query);
                     frPosition position = (frPosition)Application.OpenForms["frPosition"];
                     if (position != null)
@@ -131,7 +131,7 @@ namespace QLNhanSu.Tabs.Employees.FormChucVu.FeatureChucVu
 
             try
             {
-                string query = "UPDATE tbl_ChucVu SET TENCV = '" + ten + "' WHERE IDCV = '" + id + "'";
+                string query = "UPDATE tbl_ChucVu SET TENCV = 'N" + ten + "' WHERE IDCV = '" + id + "'";
 
                 bindingSQL.ThemNhanVien(query);
                 frPosition position = (frPosition)Application.OpenForms["frPosition"];
@@ -175,5 +175,14 @@ namespace QLNhanSu.Tabs.Employees.FormChucVu.FeatureChucVu
             }
         }
 
+        private void txtChucVu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

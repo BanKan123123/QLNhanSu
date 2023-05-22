@@ -11,8 +11,8 @@ namespace QLNhanSu.BindingSQL
     public class BindingSQL
     {
         Auth auth = new Auth();
-        string strcon = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Persist Security Info=True;User ID=sa;Password=1";
-        string strAuth = "Data Source=LAPTOP-4T313C1P\\SQLEXPRESS;Initial Catalog=ImportSQL;Integrated Security=True";
+        string strcon = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLNHANSU;Integrated Security=True";
+        string strAuth = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=QLNHANSU;Integrated Security=True";
         public BindingSQL() { }
         public DataTable BindingData(string nameTable)
         {

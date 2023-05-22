@@ -31,7 +31,7 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 
         private void FrThemNhanVien_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -87,11 +87,12 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            if(btnThemNhanVien.Text.Trim().Equals("Thêm"))
+            if (btnThemNhanVien.Text.Trim().Equals("Thêm"))
             {
                 ThemNhanVien();
-              
-            } if (btnThemNhanVien.Text.Trim().Equals("Sửa"))
+
+            }
+            if (btnThemNhanVien.Text.Trim().Equals("Sửa"))
             {
                 SuaNhanVien();
             }
@@ -125,14 +126,17 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 
         public void SetTextForm(string nameButton)
         {
-            if (nameButton.Equals("Thêm")) {
+            if (nameButton.Equals("Thêm"))
+            {
                 lblTitleNhanVien.Text = "Thêm Nhân Viên";
                 btnThemNhanVien.Text = "Thêm";
                 GetDataSelectNhanVien();
             }
-            if (nameButton.Equals("Sửa")) {
+            if (nameButton.Equals("Sửa"))
+            {
                 lblTitleNhanVien.Text = "Sửa Nhân Viên";
                 btnThemNhanVien.Text = "Sửa";
+                GetDataSelectNhanVien();
             }
             if (nameButton.Equals("Xem"))
             {
@@ -306,11 +310,13 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
 
                 try
                 {
-                    string query = "INSERT INTO tbl_NhanVien VALUES ('" + ten + "' , '" + gioiTinh + "' ,  '" + ngaySinh + "' , '" + dienThoai + "' , '" + cccd + "'  , '" + diaChi + "' , '" + idpb + "' , '" + idbp + "' , '" + idcv + "' , '" + idtd + "', '" + iddt + "' , '" + idtg + "' , '" + 1 + "'  , '" + "" + "' )";
+                    string query = "INSERT INTO tbl_NhanVien VALUES (N'" + ten + "' , N'" + gioiTinh + "' ,  '" + ngaySinh + "' , '" + dienThoai + "' , '" + cccd + "'  , N'" + diaChi + "' , '" + idpb + "' , '" + idbp + "' , '" + idcv + "' , '" + idtd + "', '" + iddt + "' , '" + idtg + "' , '" + 1 + "'  , '" + "" + "' )";
                     bindingSQL.ThemNhanVien(query);
-                    frEmploy employ = new frEmploy();
-                    employ.Close();
-                    employ.Show();
+                    frEmploy employ = (frEmploy)Application.OpenForms["frEmploy"];
+                    if (employ != null)
+                    {
+                        employ.RefreshData();
+                    }
                     this.Close();
                     reset();
                 }
@@ -354,8 +360,13 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
                 iddt = Convert.ToInt32(cboDanToc.SelectedValue);
                 try
                 {
-                    string query = "UPDATE tbl_NhanVien SET  HOTEN = '" + ten + "' , GIOITINH = '" + gioiTinh + "' , NGAYSINH = '" + ngaySinh + "' , DIENTHOAI = '" + dienThoai + "' , CCCD = '" + cccd + "' , DIACHI = '" + diaChi + "' , IDPB = '" + idpb + "' , IDBP = '" + idbp + "' , IDCV = '" + idcv + "' ,IDTD = '" + idtd + "', IDDT = '" + iddt + "' , IDTG = '" + idtg + "' ,MACTY = '" + 1 + "' WHERE MANV = '" + id + "' ";
+                    string query = "UPDATE tbl_NhanVien SET  HOTEN = N'" + ten + "' , GIOITINH = N'" + gioiTinh + "' , NGAYSINH = '" + ngaySinh + "' , DIENTHOAI = '" + dienThoai + "' , CCCD = '" + cccd + "' , DIACHI = '" + diaChi + "' , IDPB = '" + idpb + "' , IDBP = '" + idbp + "' , IDCV = '" + idcv + "' ,IDTD = '" + idtd + "', IDDT = '" + iddt + "' , IDTG = '" + idtg + "' ,MACTY = '" + 1 + "' WHERE MANV = '" + id + "' ";
                     bindingSQL.ThemNhanVien(query);
+                    frEmploy employ = (frEmploy)Application.OpenForms["frEmploy"];
+                    if (employ != null)
+                    {
+                        employ.RefreshData();
+                    }
                     reset();
                 }
                 catch (Exception ex)
@@ -365,7 +376,7 @@ namespace QLNhanSu.Tabs.Employees.FormNhanVien.FeatureNhanVien
             }
 
         }
-       
+
     }
 
 }

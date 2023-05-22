@@ -29,7 +29,11 @@ namespace QLNhanSu.Tabs.Employees
             DataTable dt = new DataTable();
             dt = bindingSQL.BindingData(nameTable);
             dgvNhanvien.DataSource = dt;
-            MessageBox.Show("123");
+        }
+
+        public void RefreshData()
+        {
+            BindingData();
         }
         private void frEmploy_Load(object sender, EventArgs e)
         {
@@ -86,6 +90,7 @@ namespace QLNhanSu.Tabs.Employees
                 {
                     string query = "DELETE FROM tbl_NhanVien WHERE MANV = '" + GlobalDataNhanVien.SelectedId + "'";
                     bindingSQL.XoaNhanVien(query);
+                    RefreshData();  
                 }
                 catch (Exception ex)
                 {

@@ -47,6 +47,7 @@
             dgvChucvu.RowTemplate.Height = 29;
             dgvChucvu.Size = new Size(910, 543);
             dgvChucvu.TabIndex = 0;
+            dgvChucvu.CellContentClick += dgvChucvu_CellContentClick;
             // 
             // cboSearch
             // 
@@ -63,6 +64,7 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(193, 27);
             txtSearch.TabIndex = 5;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // lblSearch
             // 
@@ -108,6 +110,7 @@
             btnXoa.TabIndex = 9;
             btnXoa.Text = "    Xóa";
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // frPosition
             // 

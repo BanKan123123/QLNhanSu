@@ -37,6 +37,28 @@ namespace QLNhanSu.BindingSQL
             return dt;
         }
 
+        public DataTable Search(string query)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlConnection conn = new SqlConnection(strcon);
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+                sda.Fill(dt);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return dt;
+        }
+
         public DataTable GetManv()
         {
             DataTable dt = new DataTable();

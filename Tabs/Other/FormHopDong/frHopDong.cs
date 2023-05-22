@@ -28,7 +28,10 @@ namespace QLNhanSu.Tabs.Other
             dgvBaoHiem.DataSource = dt;
         }
 
-
+        public void RefreshData()
+        {
+            BindingData();
+        }
         private void dgvBaoHiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var row = (DataGridViewRow)dgvBaoHiem.Rows[e.RowIndex];
@@ -93,6 +96,7 @@ namespace QLNhanSu.Tabs.Other
                 {
                     string query = "DELETE FROM tbl_NhanVien WHERE MANV = '" + GlobalDataHopDong.SelectedSoHopDong + "'";
                     bindingSQL.XoaNhanVien(query);
+                    RefreshData();
                 }
                 catch (Exception ex)
                 {

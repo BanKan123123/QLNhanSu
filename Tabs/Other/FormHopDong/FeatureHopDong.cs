@@ -211,8 +211,13 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
                 //int maCty = Convert.ToInt32(cboCongTy.SelectedValue);
                 try
                 {
-                    string query = "INSERT INTO tbl_HopDong VALUES ('" + soHopDong + "' , '" + nguoiDaiDien + "' , '" + nhanVien + "' , '" + ngayBatDau + "' , '" + ngayKetThuc + "' , '" + ngayKy + "' , '" + noiDung + "' , '" + lanKy + "' , '" + thoiHan + "' ,'" + lcb + "' ,  '" + hsl + "' , '" + loaiHopDong + "' , '" + 1 + "')";
+                    string query = "INSERT INTO tbl_HopDong VALUES ('" + soHopDong + "' , N'" + nguoiDaiDien + "' , N'" + nhanVien + "' , '" + ngayBatDau + "' , '" + ngayKetThuc + "' , '" + ngayKy + "' , N'" + noiDung + "' , '" + lanKy + "' , N'" + thoiHan + "' ,'" + lcb + "' ,  '" + hsl + "' , N'" + loaiHopDong + "' , '" + 1 + "')";
                     bindingSQL.ThemNhanVien(query);
+                    frHopDong frHopDong = (frHopDong)Application.OpenForms["frHopDong"];
+                    if (frHopDong != null ) {
+                        frHopDong.RefreshData();
+                    }
+                    this.Close();
                     reset();
                 }
                 catch (Exception ex)
@@ -242,8 +247,14 @@ namespace QLNhanSu.Tabs.Other.FormHopDong
 
                 try
                 {
-                    string query = "UPDATE tbl_HopDong SET SOHD = '" + soHopDong + "' , NGUOIDAIDIEN = '" + nguoiDaiDien + "' , MANV = '" + nhanVien + "' , NGAYBATDAU = '" + ngayBatDau + "' , NGAYKETTHUC = '" + ngayKetThuc + "' , NGAYKY = '" + ngayKy + "' ,NOIDUNG = '" + noiDung + "' , LANKY = '" + lanKy + "' , THOIHAN = '" + thoiHan + "' , LUONGCOBAN = '" + lcb + "' , HESOLUONG = '" + hsl + "' ,LOAIHOPDONG = '" + loaiHopDong + "' , MACTY ='" + 1 + "' WHERE SOHD ='" + GlobalDataHopDong.SelectedSoHopDong + "' ";
+                    string query = "UPDATE tbl_HopDong SET SOHD = '" + soHopDong + "' , NGUOIDAIDIEN = N'" + nguoiDaiDien + "N' , MANV = '" + nhanVien + "' , NGAYBATDAU = '" + ngayBatDau + "' , NGAYKETTHUC = '" + ngayKetThuc + "' , NGAYKY = '" + ngayKy + "' ,NOIDUNG = N'" + noiDung + "' , LANKY = '" + lanKy + "' , THOIHAN = N'" + thoiHan + "' , LUONGCOBAN = '" + lcb + "' , HESOLUONG = '" + hsl + "' ,LOAIHOPDONG = N'" + loaiHopDong + "' , MACTY ='" + 1 + "' WHERE SOHD ='" + GlobalDataHopDong.SelectedSoHopDong + "' ";
                     bindingSQL.ThemNhanVien(query);
+                    frHopDong frHopDong = (frHopDong)Application.OpenForms["frHopDong"];
+                    if (frHopDong != null)
+                    {
+                        frHopDong.RefreshData();
+                    }
+                    this.Close();
                     reset();
                 }
                 catch (Exception ex)
